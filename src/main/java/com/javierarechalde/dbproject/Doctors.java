@@ -6,12 +6,12 @@ import java.sql.PreparedStatement;
 
 public class Doctors {
 
-	private long drid;
+	private int drid;
 	private String fname;
 	private String lname;
 	private String specialty;
 	
-	public long getDrid() {
+	public int getDrid() {
 		return drid;
 	}
 	public void setDrid(int drid) {
@@ -40,7 +40,7 @@ public class Doctors {
 		String sql = "INSERT INTO DOCTORS (DRID,FNAME,LNAME,SPECIALTY) VALUES (?, ?, ?, ?)";
 		try(Connection connection = DBHelper.getConnection(); PreparedStatement pstmt = connection.prepareStatement(sql)){
 			
-			pstmt.setLong(1, drid);
+			pstmt.setInt(1, drid);
 			pstmt.setString(2, fname);
 			pstmt.setString(3, lname);
 			pstmt.setString(4, specialty);

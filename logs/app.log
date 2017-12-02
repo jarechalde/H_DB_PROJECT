@@ -95,3 +95,143 @@
 2017-Dec-02 14:26:18.768 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
 2017-Dec-02 14:26:19.170 [main] DEBUG DBHelper.java:34 - Closing the data source
 2017-Dec-02 14:26:19.186 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:27:04.547 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 14:27:04.578 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 14:27:04.996 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 14:27:05.027 [main] INFO Main.java:54 - DONE
+2017-Dec-02 14:27:27.142 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:27:27.173 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:27:27.597 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 14:27:27.612 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:27:30.304 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 14:27:30.335 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 14:27:30.351 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 14:27:30.687 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 14:27:30.706 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 14:27:30.706 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 14:27:30.707 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 14:27:30.707 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 14:27:30.709 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 14:27:30.720 [main] INFO Main.java:54 - DONE
+2017-Dec-02 14:27:58.767 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:27:58.798 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:27:59.197 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 14:27:59.212 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:28:03.391 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 14:28:03.407 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 14:28:03.422 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 14:28:03.743 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 14:28:03.759 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 14:28:03.759 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 14:28:03.759 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 14:28:03.759 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 14:28:03.759 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 14:28:03.775 [main] INFO Main.java:54 - DONE
+2017-Dec-02 14:28:13.211 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 14:28:13.227 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 14:28:13.678 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 14:28:13.693 [main] INFO Main.java:54 - DONE
+2017-Dec-02 14:29:10.829 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:29:10.845 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:29:11.270 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 14:29:11.287 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:29:34.152 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:29:34.183 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:29:34.624 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 14:29:34.655 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:30:07.407 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:30:07.438 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:30:07.854 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 14:30:07.870 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:30:12.402 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 14:30:12.433 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 14:30:12.854 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 14:30:12.869 [main] INFO Main.java:54 - DONE
+2017-Dec-02 15:01:59.553 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:01:59.581 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:02:00.001 [main] ERROR Main2.java:25 - Failed to Save the doctor
+2017-Dec-02 15:02:00.001 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:02:00.032 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:02:09.813 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:02:09.844 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:02:10.269 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:02:10.285 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:02:30.984 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 15:02:31.016 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 15:02:31.016 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 15:02:31.362 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 15:02:31.362 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 15:02:31.362 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 15:02:31.362 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 15:02:31.362 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 15:02:31.362 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 15:02:31.378 [main] INFO Main.java:54 - DONE
+2017-Dec-02 15:03:11.128 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:03:11.144 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:03:11.551 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:03:11.566 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:03:16.439 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 15:03:16.470 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 15:03:16.470 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 15:03:16.814 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 15:03:16.830 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 15:03:16.830 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 15:03:16.830 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 15:03:16.830 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 15:03:16.830 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 15:03:16.861 [main] INFO Main.java:54 - DONE
+2017-Dec-02 15:04:11.172 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:04:11.188 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:04:11.590 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:04:11.606 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:04:14.913 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 15:04:14.940 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 15:04:14.941 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 15:04:15.272 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 15:04:15.288 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 15:04:15.288 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 15:04:15.288 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 15:04:15.288 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 15:04:15.288 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 15:04:15.319 [main] INFO Main.java:54 - DONE
+2017-Dec-02 15:05:56.994 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:05:57.025 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:05:57.472 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:05:57.488 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:06:51.162 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:06:51.178 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:06:51.603 [main] ERROR Main2.java:25 - Failed to Save the doctor
+2017-Dec-02 15:06:51.603 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:06:51.618 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:07:50.813 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:07:50.844 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:07:59.134 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:07:59.150 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:07:59.603 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:07:59.618 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:08:18.724 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:08:18.755 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:08:19.151 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:08:19.167 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 15:08:59.773 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 15:08:59.788 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 15:09:00.233 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 15:09:00.251 [main] INFO Main2.java:32 - DONE

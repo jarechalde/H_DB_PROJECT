@@ -16,10 +16,10 @@ public class Main2 {
 		
 		try {
 			Doctors d = new Doctors();
-			d.setDrid(256348);
-			d.setFname("Lionel");
-			d.setLname("Messi");
-			d.setSpecialty("HESTHEN1");
+			d.setDrid(125468);
+			d.setFname("LIONEL");
+			d.setLname("MESSI");
+			d.setSpecialty("LOLASO");
 			d.save();
 		} catch (SQLException e) {
 			LOGGER.error("Failed to Save the doctor");
