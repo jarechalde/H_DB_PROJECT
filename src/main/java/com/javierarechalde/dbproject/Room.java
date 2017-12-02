@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 
-public class Rooms {
+public class Room {
 
 	private int rid;
 	private int rcap;

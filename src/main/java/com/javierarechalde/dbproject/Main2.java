@@ -18,7 +18,7 @@ public class Main2 {
 		DBHelper.getInstance().init();
 		
 		try {
-			Doctors d = new Doctors();
+			Doctor d = new Doctor();
 			d.setDrid(125468);
 			d.setFname("LIONEL");
 			d.setLname("MESSI");

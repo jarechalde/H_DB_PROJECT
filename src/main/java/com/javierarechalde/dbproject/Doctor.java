@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 
-public class Doctors {
+public class Doctor {
 
 	private int drid;
 	private String fname;

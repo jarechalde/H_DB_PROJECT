@@ -29,7 +29,7 @@ public class RoomsTest {
 	
 	@Test
 	public void testSave() throws SQLException{
-		Rooms r = new Rooms();
+		Room r = new Room();
 		r.setrid(125468);
 		r.setrcap(10);
 		r.setrtype("MESSI");
