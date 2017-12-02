@@ -1,0 +1,85 @@
+2017-Dec-02 12:59:36.710 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 12:59:36.738 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 12:59:36.750 [main] INFO Slf4jLog.java:44 - Flyway 4.2.0 by Boxfuse
+2017-Dec-02 12:59:37.087 [main] INFO Slf4jLog.java:44 - Database: jdbc:h2:target/db (H2 1.3)
+2017-Dec-02 12:59:37.093 [main] DEBUG Slf4jLog.java:40 - DDL Transactions Supported: false
+2017-Dec-02 12:59:37.095 [main] DEBUG Slf4jLog.java:40 - Schema: PUBLIC
+2017-Dec-02 12:59:37.099 [main] DEBUG Slf4jLog.java:40 - Spring Jdbc available: false
+2017-Dec-02 12:59:37.100 [main] DEBUG Slf4jLog.java:40 - Scanning for SQL callbacks ...
+2017-Dec-02 12:59:37.100 [main] DEBUG Slf4jLog.java:40 - Scanning for classpath resources at 'classpath:db/migration' (Prefix: '', Suffix: '.sql')
+2017-Dec-02 12:59:37.101 [main] DEBUG Slf4jLog.java:40 - Determining location urls for classpath:db/migration using ClassLoader sun.misc.Launcher$AppClassLoader@2a139a55 ...
+2017-Dec-02 12:59:37.101 [main] DEBUG Slf4jLog.java:40 - Scanning URL: file:/C:/Users/Javier/Documents/GitHub/H_DB/target/classes/db/migration
+2017-Dec-02 12:59:37.101 [main] DEBUG Slf4jLog.java:40 - JBoss VFS v2 available: false
+2017-Dec-02 12:59:37.102 [main] DEBUG Slf4jLog.java:40 - Scanning starting at classpath root in filesystem: C:\Users\Javier\Documents\GitHub\H_DB\target\classes\
+2017-Dec-02 12:59:37.103 [main] DEBUG Slf4jLog.java:40 - Scanning for resources in path: C:\Users\Javier\Documents\GitHub\H_DB\target\classes\db\migration (db/migration)
+2017-Dec-02 12:59:37.114 [main] DEBUG Slf4jLog.java:40 - Found resource: db/migration/V1__HOSPITAL.sql
+2017-Dec-02 12:59:37.114 [main] DEBUG Slf4jLog.java:40 - Found resource: db/migration/V2__HOSPITAL_POPULATE.sql
+2017-Dec-02 12:59:37.123 [main] DEBUG Slf4jLog.java:40 - Validating migrations ...
+2017-Dec-02 12:59:37.125 [main] DEBUG Slf4jLog.java:40 - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'V', Suffix: '.sql')
+2017-Dec-02 12:59:37.125 [main] DEBUG Slf4jLog.java:40 - Scanning URL: file:/C:/Users/Javier/Documents/GitHub/H_DB/target/classes/db/migration
+2017-Dec-02 12:59:37.125 [main] DEBUG Slf4jLog.java:40 - JBoss VFS v2 available: false
+2017-Dec-02 12:59:37.132 [main] DEBUG Slf4jLog.java:40 - Found resource: db/migration/V1__HOSPITAL.sql
+2017-Dec-02 12:59:37.132 [main] DEBUG Slf4jLog.java:40 - Found resource: db/migration/V2__HOSPITAL_POPULATE.sql
+2017-Dec-02 12:59:37.136 [main] DEBUG Slf4jLog.java:40 - Scanning for classpath resources at 'classpath:db/migration' (Prefix: 'R', Suffix: '.sql')
+2017-Dec-02 12:59:37.136 [main] DEBUG Slf4jLog.java:40 - Scanning URL: file:/C:/Users/Javier/Documents/GitHub/H_DB/target/classes/db/migration
+2017-Dec-02 12:59:37.136 [main] DEBUG Slf4jLog.java:40 - JBoss VFS v2 available: false
+2017-Dec-02 12:59:37.142 [main] DEBUG Slf4jLog.java:40 - Filtering out resource: db/migration/V1__HOSPITAL.sql (filename: V1__HOSPITAL.sql)
+2017-Dec-02 12:59:37.142 [main] DEBUG Slf4jLog.java:40 - Filtering out resource: db/migration/V2__HOSPITAL_POPULATE.sql (filename: V2__HOSPITAL_POPULATE.sql)
+2017-Dec-02 12:59:37.144 [main] DEBUG Slf4jLog.java:40 - Scanning for classes at 'classpath:db/migration' (Implementing: 'org.flywaydb.core.api.migration.jdbc.JdbcMigration')
+2017-Dec-02 12:59:37.144 [main] DEBUG Slf4jLog.java:40 - Scanning URL: file:/C:/Users/Javier/Documents/GitHub/H_DB/target/classes/db/migration
+2017-Dec-02 12:59:37.144 [main] DEBUG Slf4jLog.java:40 - JBoss VFS v2 available: false
+2017-Dec-02 12:59:37.151 [main] DEBUG Slf4jLog.java:40 - Filtering out resource: db/migration/V1__HOSPITAL.sql (filename: V1__HOSPITAL.sql)
+2017-Dec-02 12:59:37.151 [main] DEBUG Slf4jLog.java:40 - Filtering out resource: db/migration/V2__HOSPITAL_POPULATE.sql (filename: V2__HOSPITAL_POPULATE.sql)
+2017-Dec-02 12:59:37.158 [main] INFO Slf4jLog.java:44 - Successfully validated 2 migrations (execution time 00:00.032s)
+2017-Dec-02 12:59:37.160 [main] DEBUG Slf4jLog.java:40 - Schema "PUBLIC" already exists. Skipping schema creation.
+2017-Dec-02 12:59:37.166 [main] DEBUG Slf4jLog.java:40 - Locking table "PUBLIC"."schema_version"...
+2017-Dec-02 12:59:37.166 [main] DEBUG Slf4jLog.java:40 - Lock acquired for table "PUBLIC"."schema_version"
+2017-Dec-02 12:59:37.168 [main] INFO Slf4jLog.java:44 - Current version of schema "PUBLIC": 2
+2017-Dec-02 12:59:37.168 [main] INFO Slf4jLog.java:44 - Schema "PUBLIC" is up to date. No migration necessary.
+2017-Dec-02 12:59:37.169 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 12:59:37.169 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 12:59:37.170 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 12:59:37.170 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 12:59:37.171 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 12:59:37.171 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 12:59:37.171 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 12:59:37.171 [main] DEBUG Main.java:39 - 	>> [45632] Parker Yang PREDIATRIST
+2017-Dec-02 13:04:39.347 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 13:04:39.380 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 13:04:39.812 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 13:04:39.813 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 13:04:39.815 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 13:04:39.815 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 13:04:39.816 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 13:04:39.816 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 13:04:39.818 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 13:04:39.818 [main] DEBUG Main.java:39 - 	>> [45632] Parker Yang PREDIATRIST
+2017-Dec-02 13:06:33.268 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-02 13:06:33.296 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-02 13:06:33.743 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-02 13:06:33.743 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-02 13:06:33.745 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-02 13:06:33.745 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-02 13:06:33.745 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-02 13:06:33.745 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-02 13:06:33.747 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-02 13:06:33.747 [main] DEBUG Main.java:39 - 	>> [45632] Parker Yang PREDIATRIST
+2017-Dec-02 13:06:33.766 [main] INFO Main.java:54 - DONE
+2017-Dec-02 14:02:22.928 [main] DEBUG DBHelper.java:33 - Creating the datasource
+2017-Dec-02 14:02:22.957 [main] DEBUG DBHelper.java:42 - Executing Flyway (database migration)
+2017-Dec-02 14:05:12.511 [main] DEBUG DBHelper.java:34 - Creating the datasource
+2017-Dec-02 14:05:12.538 [main] DEBUG DBHelper.java:43 - Executing Flyway (database migration)
+2017-Dec-02 14:05:41.913 [main] DEBUG DBHelper.java:34 - Creating the datasource
+2017-Dec-02 14:05:41.941 [main] DEBUG DBHelper.java:43 - Executing Flyway (database migration)
+2017-Dec-02 14:11:56.482 [main] DEBUG DBHelper.java:34 - Creating the datasource
+2017-Dec-02 14:11:56.510 [main] DEBUG DBHelper.java:43 - Executing Flyway (database migration)
+2017-Dec-02 14:13:18.328 [main] DEBUG DBHelper.java:34 - Creating the datasource
+2017-Dec-02 14:13:18.355 [main] DEBUG DBHelper.java:43 - Executing Flyway (database migration)
+2017-Dec-02 14:13:53.921 [main] DEBUG DBHelper.java:34 - Creating the datasource
+2017-Dec-02 14:13:53.949 [main] DEBUG DBHelper.java:43 - Executing Flyway (database migration)
+2017-Dec-02 14:19:53.795 [main] DEBUG DBHelper.java:32 - Creating the datasource
+2017-Dec-02 14:19:53.811 [main] DEBUG DBHelper.java:41 - Executing Flyway (database migration)
+2017-Dec-02 14:20:16.165 [main] DEBUG DBHelper.java:32 - Creating the datasource
+2017-Dec-02 14:20:16.196 [main] DEBUG DBHelper.java:41 - Executing Flyway (database migration)
+2017-Dec-02 14:21:47.592 [main] DEBUG DBHelper.java:36 - Creating the datasource
+2017-Dec-02 14:21:47.607 [main] DEBUG DBHelper.java:45 - Executing Flyway (database migration)
