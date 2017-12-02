@@ -3,6 +3,7 @@ package com.javierarechalde.dbproject;
 //STEP 1. Import required packages
 import java.sql.*;
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.flywaydb.core.Flyway;
 
 public class Main{
 	
@@ -15,8 +16,11 @@ public class Main{
 		ds.setUsername("root");
 		ds.setPassword("16387495p");
 		
-		try (Connection connection = ds.getConnection()){
-			System.out.println("Connected");
+		try {		
+		Flyway flyway = new Flyway();
+		flyway.setDataSource(ds);
+		flyway.migrate();
+			
 		} finally {
 			ds.close();
 		}		
