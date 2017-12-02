@@ -44,6 +44,7 @@ public class Doctors {
 			pstmt.setString(2, fname);
 			pstmt.setString(3, lname);
 			pstmt.setString(4, specialty);
+			pstmt.execute();
 			
 		}
 		
