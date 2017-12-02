@@ -83,3 +83,15 @@
 2017-Dec-02 14:20:16.196 [main] DEBUG DBHelper.java:41 - Executing Flyway (database migration)
 2017-Dec-02 14:21:47.592 [main] DEBUG DBHelper.java:36 - Creating the datasource
 2017-Dec-02 14:21:47.607 [main] DEBUG DBHelper.java:45 - Executing Flyway (database migration)
+2017-Dec-02 14:25:24.032 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:25:24.063 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:25:41.730 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:25:41.745 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:26:05.580 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:26:05.595 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:26:06.068 [main] DEBUG DBHelper.java:34 - Closingthe data source
+2017-Dec-02 14:26:06.095 [main] INFO Main2.java:31 - DONE
+2017-Dec-02 14:26:18.737 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 14:26:18.768 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 14:26:19.170 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 14:26:19.186 [main] INFO Main2.java:31 - DONE
