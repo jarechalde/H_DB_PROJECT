@@ -10,12 +10,12 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class RoomsTest {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(RoomsTest.class);
+	//private static final Logger LOGGER = LoggerFactory.getLogger(RoomsTest.class);
 	
 	//Executed before any test that we put under @test
 	@Before

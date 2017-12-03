@@ -26,12 +26,12 @@ import javax.swing.SwingWorker;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class Application extends JFrame{
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+	//private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
 	private static final long serialVersionUID = 2985602890713332714L;
 	
