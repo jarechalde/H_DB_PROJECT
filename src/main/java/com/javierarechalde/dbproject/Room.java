@@ -37,6 +37,31 @@ public class Room {
 		this.rtype = rtype;
 	}
 	
+	@Override
+	public String toString() {
+		final StringBuilder formatted = new StringBuilder();
+		
+		if (rid == -1) {
+			formatted.append("[No id]");
+		} else {
+			formatted.append("[").append(rid).append("]");
+		}
+		
+		if (rcap == 0) {
+			formatted.append("No Capacity");
+		} else {
+			formatted.append(rcap);
+		}
+		
+		if (rtype == null) {
+			formatted.append("No Type");
+		} else {
+			formatted.append("-").append(rtype);
+		}
+		
+		return formatted.toString();
+	}
+	
 	public void delete() throws SQLException{
 		Room.LOGGER.warn("Called Delete function");
 		
