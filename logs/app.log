@@ -800,3 +800,926 @@ SELECT * FROM ROOMS ORDER BY RID [42122-170]
 2017-Dec-02 18:06:47.674 [main] DEBUG DBHelper.java:48 - Creating the data source
 2017-Dec-02 18:06:47.701 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
 2017-Dec-02 18:06:48.141 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:02:23.818 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:02:23.846 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:02:24.549 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:27:33.237 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:27:33.265 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:27:33.680 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:27:33.706 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:27:33.707 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:27:33.846 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:28:06.159 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:28:06.187 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:28:06.606 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:28:06.634 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:28:06.634 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:28:06.784 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:28:18.352 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:28:18.380 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:28:18.806 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:28:18.833 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:28:18.833 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:28:18.980 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:28:34.267 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:28:34.299 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:28:34.787 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:33:36.221 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:33:36.252 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:33:36.656 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:33:36.687 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:33:36.687 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:33:36.815 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:34:14.729 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:34:14.749 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:34:15.170 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:34:15.186 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:34:15.186 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:34:15.322 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:34:30.849 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:34:30.864 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:34:31.296 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:34:31.328 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:34:31.328 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:34:31.475 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:35:57.884 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:35:57.919 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:35:58.324 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:35:58.355 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:35:58.355 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:35:58.510 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:36:13.921 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:36:13.936 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:36:14.372 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:36:14.403 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:36:14.403 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:36:14.550 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:36:23.116 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:36:23.144 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:36:23.583 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:36:23.615 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:36:23.615 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:36:23.742 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:37:07.734 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:37:07.750 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:37:08.168 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMID = ?, ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMID = ?, ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:73)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:37:08.170 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:37:08.193 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:38:15.088 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:38:15.120 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:38:15.549 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMID = ?, ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMID = ?, ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:73)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:38:15.549 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:38:15.580 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:38:40.867 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:38:40.898 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:38:41.318 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMID = ?, ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?;"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMID = ?, ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ?; [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:73)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:38:41.318 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:38:41.349 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:40:31.332 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:40:31.348 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:40:31.791 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:73)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:40:31.791 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:40:31.823 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:42:08.799 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:42:08.830 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:42:09.241 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:73)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:42:09.241 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:42:09.256 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:43:04.531 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:43:04.558 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:43:04.966 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:43:04.992 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:43:04.992 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:43:05.145 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:43:09.775 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:43:09.803 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:43:10.233 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:43:33.423 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:43:33.450 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:43:33.844 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:44:06.866 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:44:06.893 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:44:07.338 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:44:21.406 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:44:21.432 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:44:21.834 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:44:38.166 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:44:38.194 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:44:38.595 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:48:37.964 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:48:37.992 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:48:38.412 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:73)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:48:38.413 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:48:38.436 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:49:15.013 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:49:15.042 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:49:15.465 [main] DEBUG Room.java:73 - ROOM ID IS NOT -1
+2017-Dec-02 19:49:15.472 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:75)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:49:15.474 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:49:15.497 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:50:52.733 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:50:52.764 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:51:02.723 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:51:02.750 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:51:03.174 [main] DEBUG Room.java:59 - >> [123456] 12 PENE
+2017-Dec-02 19:51:03.175 [main] DEBUG Room.java:59 - >> [123656] 12 PENE
+2017-Dec-02 19:51:03.175 [main] DEBUG Room.java:59 - >> [124446] 12 PENE
+2017-Dec-02 19:51:03.175 [main] DEBUG Room.java:80 - ROOM ID IS NOT -1
+2017-Dec-02 19:51:03.183 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:82)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:51:03.185 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:51:03.207 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:57:00.389 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:57:00.420 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:57:00.843 [main] DEBUG Room.java:64 - >> [123456] 12 PENE
+2017-Dec-02 19:57:00.843 [main] DEBUG Room.java:64 - >> [123656] 12 PENE
+2017-Dec-02 19:57:00.843 [main] DEBUG Room.java:64 - >> [124446] 12 PENE
+2017-Dec-02 19:57:00.843 [main] DEBUG Room.java:86 - ROOM ID IS NOT -1
+2017-Dec-02 19:57:00.843 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:88)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:57:00.843 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:57:00.874 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 19:58:45.038 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 19:58:45.070 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:64 - >> [123456] 12 PENE
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:64 - >> [123656] 12 PENE
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:64 - >> [124446] 12 PENE
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:68 - HOHOHOHOHO
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:68 - HOHOHOHOHO
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:68 - HOHOHOHOHO
+2017-Dec-02 19:58:45.751 [main] DEBUG Room.java:89 - ROOM ID IS NOT -1
+2017-Dec-02 19:58:45.751 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:91)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 19:58:45.751 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 19:58:45.766 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:00:52.466 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:00:52.497 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:00:52.904 [main] DEBUG Room.java:65 - >> [123456] 12 PENE
+2017-Dec-02 20:00:52.904 [main] DEBUG Room.java:65 - >> [123656] 12 PENE
+2017-Dec-02 20:00:52.904 [main] DEBUG Room.java:65 - >> [124446] 12 PENE
+2017-Dec-02 20:00:52.904 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:00:52.919 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:00:52.919 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:00:52.919 [main] DEBUG Room.java:97 - ROOM ID IS NOT -1
+2017-Dec-02 20:00:52.919 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:99)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 20:00:52.919 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:00:52.951 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:01:36.919 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:01:36.950 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:65 - >> [123456] 12 PENE
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:65 - >> [123656] 12 PENE
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:65 - >> [124446] 12 PENE
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:01:37.381 [main] DEBUG Room.java:97 - ROOM ID IS NOT -1
+2017-Dec-02 20:01:37.381 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:99)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 20:01:37.381 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:01:37.412 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:02:07.782 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:02:07.813 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:02:08.230 [main] DEBUG Room.java:65 - >> [123456] 12 PENE
+2017-Dec-02 20:02:08.230 [main] DEBUG Room.java:65 - >> [123656] 12 PENE
+2017-Dec-02 20:02:08.230 [main] DEBUG Room.java:65 - >> [124446] 12 PENE
+2017-Dec-02 20:02:08.230 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:02:08.246 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:02:08.246 [main] DEBUG Room.java:75 - Not in the table
+2017-Dec-02 20:02:08.246 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: No data is available [2000-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcResultSet.checkOnValidRow(JdbcResultSet.java:2957)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:2963)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:307)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:215)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:215)
+	at com.javierarechalde.dbproject.Room.save(Room.java:90)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 20:02:08.246 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:02:08.261 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:05:20.505 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:05:20.536 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:58 - 121318
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:67 - >> [121318] 215 MESSI
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:67 - >> [123456] 12 PENE
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:67 - >> [123656] 12 PENE
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:67 - >> [124446] 12 PENE
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:72 - Key in the table
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:77 - Not in the table
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:77 - Not in the table
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:77 - Not in the table
+2017-Dec-02 20:05:20.966 [main] DEBUG Room.java:99 - ROOM ID IS NOT -1
+2017-Dec-02 20:05:20.982 [main] ERROR Main3.java:33 - Failed to Save the room
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE[*] ROOMID = ?"; expected "identifier"; SQL statement:
+UPDATE ROOMS SET ROOMCAP = ?, ROOMTYPE = ?, WHERE ROOMID = ? [42001-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:194)
+	at org.h2.command.Parser.readColumnIdentifier(Parser.java:2787)
+	at org.h2.command.Parser.readTableColumn(Parser.java:624)
+	at org.h2.command.Parser.parseUpdate(Parser.java:688)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at org.apache.commons.dbcp2.DelegatingConnection.prepareStatement(DelegatingConnection.java:293)
+	at com.javierarechalde.dbproject.Room.save(Room.java:101)
+	at com.javierarechalde.dbproject.Main3.main(Main3.java:24)
+2017-Dec-02 20:05:20.982 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:05:20.998 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:06:20.444 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:06:20.475 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:58 - 121318
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:67 - >> [121318] 215 MESSI
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:67 - >> [123456] 12 PENE
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:67 - >> [123656] 12 PENE
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:67 - >> [124446] 12 PENE
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:72 - Key in the table
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:77 - Not in the table
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:77 - Not in the table
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:77 - Not in the table
+2017-Dec-02 20:06:20.904 [main] DEBUG Room.java:99 - ROOM ID ALREADY IN THE TABLE
+2017-Dec-02 20:06:20.904 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSI
+2017-Dec-02 20:06:20.904 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:06:20.904 [main] DEBUG Main3.java:29 - >> [123656] 12 PENE
+2017-Dec-02 20:06:20.904 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:06:20.920 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:06:20.935 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:06:32.712 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:06:32.743 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:06:33.139 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:06:37.418 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:06:37.449 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:06:37.867 [main] DEBUG Room.java:58 - 125468
+2017-Dec-02 20:06:37.867 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:06:37.898 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:06:37.898 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:06:38.070 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:08:03.994 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:08:04.009 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:08:04.445 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:08:04.461 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:08:04.492 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:08:04.492 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:08:04.631 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:09:04.592 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:09:04.623 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:09:05.032 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:09:05.048 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:09:05.064 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:09:05.064 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:09:05.227 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:09:05.227 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:09:05.227 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:09:05.227 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:09:05.227 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:09:05.228 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:09:05.228 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:09:05.228 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:09:05.228 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:09:05.229 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:09:29.643 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:09:29.674 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:09:30.088 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:09:30.088 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:09:30.119 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:09:30.119 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:09:30.284 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:10:07.527 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:10:07.558 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:10:07.953 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:10:07.969 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:10:08.000 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:10:08.000 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:10:08.128 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:10:08.128 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:10:08.128 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:10:08.128 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:10:08.128 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:10:08.143 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:10:08.143 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:10:08.143 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:10:08.143 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:10:08.143 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:10:30.199 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:10:30.215 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:10:30.626 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:10:30.642 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:10:30.673 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:10:30.673 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:10:30.815 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:10:30.815 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:10:30.815 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:11:00.392 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:11:00.420 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:11:00.815 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:11:00.830 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:11:00.862 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:11:00.862 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:11:01.008 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:11:01.008 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:11:01.008 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:14:19.882 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:14:19.914 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:14:20.366 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:14:20.382 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:14:20.397 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:14:20.397 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:14:20.548 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:14:20.548 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:14:20.563 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:15:32.784 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:15:32.816 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:15:33.218 [main] DEBUG Room.java:82 - 121318
+2017-Dec-02 20:15:33.234 [main] DEBUG Room.java:91 - >> [123456] 12 PENE
+2017-Dec-02 20:15:33.234 [main] DEBUG Room.java:91 - >> [124446] 12 PENE
+2017-Dec-02 20:15:33.234 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:15:33.234 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:15:33.234 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSI
+2017-Dec-02 20:15:33.234 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:15:33.234 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:15:33.234 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:15:33.249 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:16:53.395 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:16:53.411 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:82 - 121318
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:91 - >> [121318] 215 MESSI
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:91 - >> [123456] 12 PENE
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:91 - >> [124446] 12 PENE
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:96 - Key in the table
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:16:53.811 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:16:53.826 [main] DEBUG Room.java:116 - ROOM ID ALREADY IN THE TABLE
+2017-Dec-02 20:16:53.826 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSI
+2017-Dec-02 20:16:53.826 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:16:53.826 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:16:53.826 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:16:53.842 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:17:16.150 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:17:16.178 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:82 - 121318
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:91 - >> [121318] 215 MESSI
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:91 - >> [123456] 12 PENE
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:91 - >> [124446] 12 PENE
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:96 - Key in the table
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:17:16.603 [main] DEBUG Room.java:116 - ROOM ID ALREADY IN THE TABLE
+2017-Dec-02 20:17:16.603 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:17:16.603 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:17:16.603 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:17:16.603 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:17:16.619 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:18:45.496 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:18:45.527 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:18:45.928 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:18:45.944 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:18:45.944 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:18:45.944 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:18:45.944 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:18:45.959 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:18:45.959 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:18:46.121 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:18:46.122 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:18:46.122 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:18:46.122 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:18:46.122 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:18:46.122 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:18:46.122 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:18:46.124 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:18:46.124 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:18:46.125 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:19:29.683 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:19:29.714 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:19:30.155 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:19:30.155 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:19:30.155 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:19:30.155 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:19:30.155 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:19:30.186 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:19:30.186 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:19:30.332 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:19:30.332 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:19:30.332 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:19:57.698 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:19:57.729 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:19:58.121 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:19:58.136 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:19:58.136 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:19:58.136 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:19:58.136 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:19:58.152 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:19:58.152 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:19:58.302 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:19:58.302 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:19:58.302 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:20:06.799 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:20:06.830 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:20:07.237 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:20:07.253 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:20:07.253 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:20:07.253 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:20:07.253 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:20:07.268 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:20:07.268 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:20:07.420 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:20:07.420 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:20:07.420 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:20:07.420 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:20:07.420 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:20:07.420 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:20:07.420 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:20:07.436 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:20:07.436 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:20:07.436 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:20:53.667 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:20:53.683 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:20:54.088 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:20:54.103 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:20:54.103 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:20:54.103 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:20:54.103 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:20:54.119 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:20:54.119 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:20:54.272 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:20:54.272 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:20:54.272 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:21:19.253 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:21:19.268 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:21:19.708 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:21:19.708 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:21:19.708 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:21:19.708 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:21:19.724 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:21:19.739 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:21:19.739 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:21:19.881 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:21:19.881 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:21:19.881 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:22:56.649 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:22:56.676 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:22:57.117 [main] DEBUG Room.java:82 - 125468
+2017-Dec-02 20:22:57.132 [main] DEBUG RoomsTest.java:83 - Checking if the room types are ok
+2017-Dec-02 20:22:57.132 [main] DEBUG Room.java:82 - 233454
+2017-Dec-02 20:22:57.132 [main] DEBUG Room.java:91 - >> [125468] 10 MESSI
+2017-Dec-02 20:22:57.132 [main] DEBUG Room.java:101 - Not in the table
+2017-Dec-02 20:22:57.132 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:22:57.148 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:22:57.148 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:22:57.298 [main] WARN Room.java:44 - Called Delete function
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:46 - 123556
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:55 - >> [123456] 12 PENE
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:55 - >> [123556] 12 PENE
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:55 - >> [124446] 12 PENE
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:60 - Key in the table
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:65 - Not in the table
+2017-Dec-02 20:22:57.298 [main] DEBUG Room.java:70 - Received RID-1
+2017-Dec-02 20:22:57.298 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:23:23.852 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:23:23.868 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:23:24.328 [main] DEBUG Room.java:80 - 121318
+2017-Dec-02 20:23:24.328 [main] DEBUG Room.java:89 - >> [123456] 12 PENE
+2017-Dec-02 20:23:24.328 [main] DEBUG Room.java:89 - >> [124446] 12 PENE
+2017-Dec-02 20:23:24.328 [main] DEBUG Room.java:99 - Not in the table
+2017-Dec-02 20:23:24.328 [main] DEBUG Room.java:99 - Not in the table
+2017-Dec-02 20:23:24.328 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:23:24.328 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:23:24.328 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:23:24.328 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:23:24.344 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:24:37.441 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:24:37.472 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:24:37.907 [main] DEBUG Room.java:74 - 121318
+2017-Dec-02 20:24:37.907 [main] DEBUG Room.java:83 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:24:37.907 [main] DEBUG Room.java:83 - >> [123456] 12 PENE
+2017-Dec-02 20:24:37.907 [main] DEBUG Room.java:83 - >> [124446] 12 PENE
+2017-Dec-02 20:24:37.923 [main] DEBUG Room.java:88 - Key in the table
+2017-Dec-02 20:24:37.923 [main] DEBUG Room.java:93 - Not in the table
+2017-Dec-02 20:24:37.923 [main] DEBUG Room.java:93 - Not in the table
+2017-Dec-02 20:24:37.923 [main] DEBUG Room.java:108 - ROOM ID ALREADY IN THE TABLE
+2017-Dec-02 20:24:37.923 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:24:37.923 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:24:37.923 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:24:37.923 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:24:37.939 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:25:19.503 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:25:19.534 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:25:19.946 [main] DEBUG Room.java:74 - 121318
+2017-Dec-02 20:25:19.962 [main] DEBUG Room.java:83 - Key in the table
+2017-Dec-02 20:25:19.962 [main] DEBUG Room.java:88 - Not in the table
+2017-Dec-02 20:25:19.962 [main] DEBUG Room.java:88 - Not in the table
+2017-Dec-02 20:25:19.962 [main] DEBUG Room.java:103 - ROOM ID ALREADY IN THE TABLE
+2017-Dec-02 20:25:19.962 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:25:19.962 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:25:19.962 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:25:19.962 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:25:19.978 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:27:10.919 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:27:10.950 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:27:11.429 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:27:11.445 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:27:11.445 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:27:11.592 [main] WARN Room.java:41 - Called Delete function
+2017-Dec-02 20:27:11.607 [main] DEBUG Room.java:43 - 123556
+2017-Dec-02 20:27:11.607 [main] DEBUG Room.java:50 - Key in the table
+2017-Dec-02 20:27:11.607 [main] DEBUG Room.java:56 - Room found in the table, Deleting...
+2017-Dec-02 20:27:11.607 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:28:08.650 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:28:08.681 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:28:09.104 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:28:09.104 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:28:09.104 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:28:09.104 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:28:09.120 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:28:15.932 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:28:15.963 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:28:16.392 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:28:16.407 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:28:16.407 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:28:16.558 [main] WARN Room.java:41 - Called Delete function
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:43 - 123556
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:47 - Looking for key to delete...
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:49 - .
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:49 - .
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:51 - Key in the table
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:49 - .
+2017-Dec-02 20:28:16.558 [main] DEBUG Room.java:57 - Room found in the table, Deleting...
+2017-Dec-02 20:28:16.558 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:29:12.236 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:29:12.265 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:29:12.651 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:29:18.086 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:29:18.118 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:29:18.567 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:29:18.567 [main] DEBUG Main3.java:29 - >> [123156] 12 PENE
+2017-Dec-02 20:29:18.567 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:29:18.567 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:29:18.567 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:29:18.582 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:30:16.940 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:30:16.972 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:30:17.407 [main] DEBUG Room.java:71 - Looking for key in the table...
+2017-Dec-02 20:30:17.408 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:30:17.408 [main] DEBUG Room.java:75 - Key in the table
+2017-Dec-02 20:30:17.408 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:30:17.410 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:30:17.410 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:30:17.410 [main] DEBUG Room.java:91 - ROOM ID ALREADY IN THE TABLE
+2017-Dec-02 20:30:17.414 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:30:17.414 [main] DEBUG Main3.java:29 - >> [123156] 12 PENE
+2017-Dec-02 20:30:17.414 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:30:17.414 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:30:17.414 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:30:17.433 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:31:16.558 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:31:16.589 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:71 - Looking for key in the table...
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:75 - Key in the table
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:17.063 [main] DEBUG Room.java:92 - Key already in the table, Updating...
+2017-Dec-02 20:31:17.079 [main] DEBUG Main3.java:29 - >> [121318] 215 MESSOOO
+2017-Dec-02 20:31:17.079 [main] DEBUG Main3.java:29 - >> [123156] 12 PENE
+2017-Dec-02 20:31:17.079 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:31:17.079 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:31:17.079 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:31:17.095 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:31:28.664 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:31:28.695 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:71 - Looking for key in the table...
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:75 - Key in the table
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:29.100 [main] DEBUG Room.java:92 - Key already in the table, Updating...
+2017-Dec-02 20:31:29.115 [main] DEBUG Main3.java:29 - >> [121318] 215 CR7
+2017-Dec-02 20:31:29.115 [main] DEBUG Main3.java:29 - >> [123156] 12 PENE
+2017-Dec-02 20:31:29.115 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:31:29.115 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:31:29.115 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:31:29.131 [main] INFO Main3.java:39 - DONE
+2017-Dec-02 20:31:34.718 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-02 20:31:34.749 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-02 20:31:35.149 [main] DEBUG Room.java:71 - Looking for key in the table...
+2017-Dec-02 20:31:35.149 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:35.149 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:35.149 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:35.165 [main] DEBUG Room.java:73 - .
+2017-Dec-02 20:31:35.165 [main] DEBUG Room.java:82 - Key not in the table, Inserting...
+2017-Dec-02 20:31:35.165 [main] DEBUG Main3.java:29 - >> [12318] 215 CR7
+2017-Dec-02 20:31:35.165 [main] DEBUG Main3.java:29 - >> [121318] 215 CR7
+2017-Dec-02 20:31:35.165 [main] DEBUG Main3.java:29 - >> [123156] 12 PENE
+2017-Dec-02 20:31:35.165 [main] DEBUG Main3.java:29 - >> [123456] 12 PENE
+2017-Dec-02 20:31:35.165 [main] DEBUG Main3.java:29 - >> [124446] 12 PENE
+2017-Dec-02 20:31:35.165 [main] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-02 20:31:35.180 [main] INFO Main3.java:39 - DONE

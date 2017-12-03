@@ -18,9 +18,9 @@ public class Main3 {
 		try {
 			
 			Room r = new Room();
-			r.setrid(121318);
+			r.setrid(12318);
 			r.setrcap(215);
-		    r.setrtype("MESSI");
+		    r.setrtype("CR7");
 			r.save();
 			
 			final List<Room> rooms = RoomsHelper.getInstance().getRooms();
