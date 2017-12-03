@@ -20,7 +20,7 @@ public class Main{
 		ds.setDriverClassName("org.h2.Driver");
 		ds.setUrl("jdbc:h2:target/db");
 		ds.setUsername("jarechalde");
-		ds.setPassword("16387495p");
+		ds.setPassword("123");
 		
 		try {
 		//Doing the migration

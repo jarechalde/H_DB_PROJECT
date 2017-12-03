@@ -1,7 +1,9 @@
 package com.javierarechalde.dbproject;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import javax.sql.DataSource;
 
@@ -45,12 +47,26 @@ public class DBHelper {
   }
 
   public void init() {
+	  
+	DBHelper.LOGGER.debug("Loading Properties");
+	final Properties properties = new Properties();
+	  properties.put("db.path", "target/db");
+	  properties.put("db.username","jarechalde");
+	  properties.put("db.password","PatatillasFritas");
+	  
+	  try {
+		  properties.load(getClass().getResourceAsStream("/app.properties"));
+	  } catch (final IOException e) {
+		  DBHelper.LOGGER.error("Failed to load the properties");
+	  }
+	  
+	  
     DBHelper.LOGGER.debug("Creating the data source");
     ds = new BasicDataSource();
     ds.setDriverClassName("org.h2.Driver");
-    ds.setUrl("jdbc:h2:target/db");
-    ds.setUsername("jarechalde");
-    ds.setPassword("16387495p");
+    ds.setUrl("jdbc:h2:"+properties.getProperty("db.path"));
+    ds.setUsername(properties.getProperty("db.username"));
+    ds.setPassword(properties.getProperty("db.password"));
 
     DBHelper.LOGGER.debug("Executing Flyway (database migration)");
     final Flyway flyway = new Flyway();

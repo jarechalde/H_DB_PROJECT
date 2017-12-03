@@ -39,3 +39,51 @@
 2017-Dec-03 17:53:06.107 [AWT-EventQueue-0] DEBUG Room.java:76 - Key in the table
 2017-Dec-03 17:53:06.107 [AWT-EventQueue-0] DEBUG Room.java:74 - .
 2017-Dec-03 17:53:06.107 [AWT-EventQueue-0] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 17:54:58.500 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-03 18:05:38.006 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 18:05:38.008 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 18:05:38.037 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 18:05:38.600 [AWT-EventQueue-0] DEBUG Main4.java:20 - Starting UI
+2017-Dec-03 18:05:45.265 [AWT-EventQueue-0] WARN Room.java:66 - Called Delete function
+2017-Dec-03 18:05:45.267 [AWT-EventQueue-0] DEBUG Room.java:68 - 896547
+2017-Dec-03 18:05:45.268 [AWT-EventQueue-0] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 18:05:45.269 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:05:45.269 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:05:45.269 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:05:45.269 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:05:45.269 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:05:45.269 [AWT-EventQueue-0] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 18:05:45.270 [AWT-EventQueue-0] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 18:05:46.576 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 18:09:29.639 [main] DEBUG Main.java:17 - Creating the datasource
+2017-Dec-03 18:09:29.667 [main] DEBUG Main.java:27 - Executing Flyway (database migration)
+2017-Dec-03 18:09:32.432 [main] DEBUG Main.java:32 - Executing some queries
+2017-Dec-03 18:09:32.432 [main] DEBUG Main.java:36 - DOCTORS:
+2017-Dec-03 18:09:32.435 [main] DEBUG Main.java:39 - 	>> [21427] KEPA HAMECHO ODONTOLOGY
+2017-Dec-03 18:09:32.435 [main] DEBUG Main.java:39 - 	>> [22587] JOHNNY MELAVO TRAUMATOLOGY
+2017-Dec-03 18:09:32.435 [main] DEBUG Main.java:39 - 	>> [25789] JAVIER PELAZ SURGERY
+2017-Dec-03 18:09:32.436 [main] DEBUG Main.java:39 - 	>> [25859] JAVIER ARECHALDE SURGERY
+2017-Dec-03 18:09:32.438 [main] DEBUG Main.java:39 - 	>> [28897] ANA ARECHALDE DERMATOLOGY
+2017-Dec-03 18:09:32.457 [main] INFO Main.java:54 - DONE
+2017-Dec-03 18:09:37.740 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-03 18:09:37.767 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-03 18:09:38.241 [AWT-EventQueue-0] DEBUG Main4.java:21 - Starting UI
+2017-Dec-03 18:09:43.727 [AWT-EventQueue-0] WARN Room.java:66 - Called Delete function
+2017-Dec-03 18:09:43.728 [AWT-EventQueue-0] DEBUG Room.java:68 - 98967
+2017-Dec-03 18:09:43.729 [AWT-EventQueue-0] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 18:09:43.729 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:09:43.729 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:09:43.730 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:09:43.730 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:09:43.730 [AWT-EventQueue-0] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 18:09:43.730 [AWT-EventQueue-0] DEBUG Room.java:74 - .
+2017-Dec-03 18:09:43.730 [AWT-EventQueue-0] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 18:09:44.340 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-03 18:09:52.927 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-03 18:09:52.954 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-03 18:09:53.473 [AWT-EventQueue-0] DEBUG Main4.java:21 - Starting UI
+2017-Dec-03 18:12:35.115 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-03 18:12:47.950 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-03 18:12:47.977 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-03 18:12:48.473 [AWT-EventQueue-0] DEBUG Main4.java:21 - Starting UI
+2017-Dec-03 18:12:49.845 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source

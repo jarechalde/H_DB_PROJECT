@@ -14,7 +14,6 @@ public class Main4 {
 		DBHelper.getInstance().init();
 		DBHelper.getInstance().registerShutdownHook();
 		
-		
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
