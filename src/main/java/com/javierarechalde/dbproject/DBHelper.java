@@ -57,5 +57,14 @@ public class DBHelper {
     flyway.setDataSource(ds);
     flyway.migrate();
   }
+  	
+  public void registerShutdownHook() {
+  		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+  			@Override
+  			public void run() {
+  				close();
+  		}
+  	}));
+  }
 
 }
