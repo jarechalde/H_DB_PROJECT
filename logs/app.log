@@ -87,3 +87,7 @@
 2017-Dec-03 18:12:47.977 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
 2017-Dec-03 18:12:48.473 [AWT-EventQueue-0] DEBUG Main4.java:21 - Starting UI
 2017-Dec-03 18:12:49.845 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-03 18:15:13.525 [main] DEBUG DBHelper.java:48 - Creating the data source
+2017-Dec-03 18:15:13.551 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
+2017-Dec-03 18:15:14.082 [AWT-EventQueue-0] DEBUG Main4.java:21 - Starting UI
+2017-Dec-03 18:15:15.378 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source
