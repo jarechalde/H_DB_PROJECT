@@ -44,7 +44,7 @@ public class RoomsHelperTest {
 			
 			Room room = rooms.get(0);
 			Assert.assertNotNull(room);
-			Assert.assertEquals(123456, room.getrid());
+			Assert.assertEquals(123156, room.getrid());
 			Assert.assertEquals(12, room.getrcap());
 			Assert.assertEquals("PENE", room.getrtype());
 			

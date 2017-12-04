@@ -91,3 +91,143 @@
 2017-Dec-03 18:15:13.551 [main] DEBUG DBHelper.java:55 - Executing Flyway (database migration)
 2017-Dec-03 18:15:14.082 [AWT-EventQueue-0] DEBUG Main4.java:21 - Starting UI
 2017-Dec-03 18:15:15.378 [Thread-3] DEBUG DBHelper.java:34 - Closing the data source
+2017-Dec-03 19:24:57.398 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:24:57.414 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:24:57.445 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:24:58.090 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-03 19:24:59.446 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:25:57.271 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:25:57.271 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:25:57.303 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:25:57.869 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-03 19:25:59.369 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:28:16.898 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:28:16.898 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:28:16.929 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:28:17.325 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:28:17.341 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:28:17.341 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:28:17.341 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:28:17.460 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:28:17.460 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:28:17.460 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:28:17.460 [main] DEBUG Room.java:98 - .
+2017-Dec-03 19:28:17.460 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:28:17.460 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:28:17.491 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:28:17.491 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:28:17.491 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:28:17.611 [main] WARN Room.java:66 - Called Delete function
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:68 - 123556
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:28:17.611 [main] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 19:28:17.611 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:29:03.851 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:29:03.851 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:29:03.882 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:29:04.578 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:29:04.729 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:29:04.729 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:29:04.729 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:29:04.998 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:29:04.998 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:29:04.998 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:29:04.998 [main] DEBUG Room.java:98 - .
+2017-Dec-03 19:29:04.998 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:29:04.998 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:29:05.014 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:29:05.014 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:29:05.014 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:29:05.133 [main] WARN Room.java:66 - Called Delete function
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:68 - 123556
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:29:05.133 [main] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 19:29:05.133 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:29:19.648 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:29:19.648 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:29:19.680 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:29:20.132 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-03 19:29:21.663 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:41:50.392 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:41:50.395 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:41:50.420 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:41:50.802 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:41:50.822 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:41:50.823 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:41:50.823 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:41:50.943 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:41:50.943 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:41:50.944 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:41:50.944 [main] DEBUG Room.java:98 - .
+2017-Dec-03 19:41:50.944 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:41:50.945 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:41:50.962 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:41:50.963 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:41:50.963 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:41:51.106 [main] WARN Room.java:66 - Called Delete function
+2017-Dec-03 19:41:51.109 [main] DEBUG Room.java:68 - 123556
+2017-Dec-03 19:41:51.110 [main] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 19:41:51.110 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:41:51.110 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:41:51.111 [main] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 19:41:51.111 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:41:51.111 [main] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 19:41:51.113 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:44:26.648 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:44:26.648 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:44:26.679 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:44:27.076 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:44:27.096 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:44:27.096 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:44:27.096 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:44:27.210 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:44:27.210 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:44:27.210 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:44:27.210 [main] DEBUG Room.java:98 - .
+2017-Dec-03 19:44:27.210 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:44:27.210 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:44:27.226 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:44:27.226 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:44:27.226 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:44:27.368 [main] WARN Room.java:66 - Called Delete function
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:68 - 123556
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:44:27.368 [main] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 19:44:27.368 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:45:37.859 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:45:37.861 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:45:37.888 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:45:38.272 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:45:38.292 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:45:38.292 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:45:38.293 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:45:38.410 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:45:38.410 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:45:38.411 [main] DEBUG Room.java:96 - Looking for key in the table...
+2017-Dec-03 19:45:38.411 [main] DEBUG Room.java:98 - .
+2017-Dec-03 19:45:38.411 [main] DEBUG Room.java:107 - Key not in the table, Inserting...
+2017-Dec-03 19:45:38.412 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-03 19:45:38.429 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-03 19:45:38.429 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-03 19:45:38.430 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-03 19:45:38.566 [main] WARN Room.java:66 - Called Delete function
+2017-Dec-03 19:45:38.567 [main] DEBUG Room.java:68 - 123556
+2017-Dec-03 19:45:38.568 [main] DEBUG Room.java:72 - Looking for key to delete...
+2017-Dec-03 19:45:38.568 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:45:38.568 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:45:38.568 [main] DEBUG Room.java:76 - Key in the table
+2017-Dec-03 19:45:38.569 [main] DEBUG Room.java:74 - .
+2017-Dec-03 19:45:38.569 [main] DEBUG Room.java:82 - Room found in the table, Deleting...
+2017-Dec-03 19:45:38.570 [main] DEBUG DBHelper.java:36 - Closing the data source

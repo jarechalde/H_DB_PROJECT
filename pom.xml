@@ -23,6 +23,37 @@
   				<target>1.7</target>
   			</configuration>
   		</plugin>
+  		
+  		<plugin>
+  			<artifactId>maven-assembly-plugin</artifactId>
+  			<version>2.4</version>
+  			<configuration>
+  			<finalName>JavierHospital</finalName>
+  			<appendAssemblyId>false</appendAssemblyId>
+  			<archive>
+  				<manifest>
+  					<addClasspath>true</addClasspath>
+  					<mainClass>com.javierarechalde.dbproject.app.Main</mainClass>
+  				</manifest>
+  				<manifestEntries>
+  					<SplashScreen-Image>splash/image.png</SplashScreen-Image>
+  				</manifestEntries>
+  		</archive>
+  		<descriptorRefs>
+  		 	<descriptorRef>jar-with-dependencies</descriptorRef>
+  		</descriptorRefs>
+  		</configuration>
+  			<executions>
+  				<execution>
+  					<id>make-my-jar-with-dependencies</id>
+  					<phase>package</phase>
+  					<goals>
+  						<goal>single</goal> 
+  					</goals>
+  				</execution>
+  			</executions>
+  		</plugin>
+  		
   	</plugins>
   </build>
   
