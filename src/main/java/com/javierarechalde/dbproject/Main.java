@@ -19,6 +19,7 @@ public class Main{
 			public void run() {
 				Main.LOGGER.debug("Starting UI");
 				Application app = new Application();
+				//CardDeck app = new CardDeck();
 				app.setTitle("Hospital Database V1");
 				app.setSize(800,400);
 				app.setLocationRelativeTo(null);
