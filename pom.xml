@@ -33,7 +33,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.javierarechalde.dbproject.app.Main</mainClass>
+							<mainClass>com.javierarechalde.dbproject.Main</mainClass>
 						</manifest>
 						<manifestEntries>
 							<SplashScreen-Image>splash/image.png</SplashScreen-Image>
