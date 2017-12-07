@@ -34,7 +34,7 @@ import javax.swing.event.ListSelectionListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class FinalApplication extends JFrame{
+public class Application extends JFrame{
 	
 	private static final long serialVersionUID = 5162873977671955329L;
 	

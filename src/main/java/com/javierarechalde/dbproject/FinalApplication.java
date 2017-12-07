@@ -9,8 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+import java.sql.Date;
 
 import javax.swing.AbstractAction;
 import javax.swing.AbstractButton;
@@ -177,7 +181,7 @@ public class FinalApplication extends JFrame{
 
 			@Override
 			public void actionPerformed(final ActionEvent e) {
-				refreshDataApp();
+				refreshApps();
 				
 			}
 		};
@@ -372,17 +376,17 @@ public class FinalApplication extends JFrame{
 		final SwingWorker<Void, Appointment> worker = new SwingWorker<Void, Appointment>() {
 			@Override
 			protected Void doInBackground() throws Exception{
-				final List<Appointment> Appointments = AppointmentsHelper.getInstance().getAppointments();
-				for(final Appointment Appointment: Appointments) {
-					publish(Appointment);
+				final List<Appointment> appointments = AppointmentsHelper.getInstance().getAppointments();
+				for(final Appointment appointment: appointments) {
+					publish(appointment);
 				}
 				return null;
 			}
 			
 			@Override
 			protected void process(final List<Appointment> chunks) {
-				for(final Appointment Appointment: chunks) {
-					appsListModel.addElement(Appointment);
+				for(final Appointment appointment: chunks) {
+					appsListModel.addElement(appointment);
 				}
 			}
 		};
@@ -394,12 +398,12 @@ public class FinalApplication extends JFrame{
 	private void createNewApp() {
 		
 		Appointment appointment =  new Appointment();
-		appointment.setAppid(default);
+		appointment.setAppid(-1);
 		appointment.setPatid(000000);
 		appointment.setDrid(000000);
 		appointment.setRoomid(000000);
-		appointment.setAstart('2017-01-01');
-		appointment.setAend('2017-01-01');
+		appointment.setAstart(java.sql.Date.valueOf("2015-01-01"));
+		appointment.setAend(java.sql.Date.valueOf("2015-01-01"));
 		appointment.setAppcom("eeeey macarena aaaaay");
 		setSelectedAppointment(appointment);
 		
@@ -411,14 +415,15 @@ public class FinalApplication extends JFrame{
 		selectedapp.setPatid(Integer.parseInt(apppatidTextField.getText()));
 		selectedapp.setDrid(Integer.parseInt(appdridTextField.getText()));
 		selectedapp.setRoomid(Integer.parseInt(appridTextField.getText()));
-		selectedapp.setAstart(Date.parse(appstartTextField.getText()));
-		selectedapp.setAend(Date.parse(appendTextField.getText()));
+		selectedapp.setAstart(java.sql.Date.valueOf(appstartTextField.getText()));
+		selectedapp.setAend(java.sql.Date.valueOf(appendTextField.getText()));
 		selectedapp.setAppcom(appcommentsTextArea.getText());
 				
 		try{
 			selectedapp.save();
 		} catch (SQLException e) {
 			JOptionPane.showMessageDialog(this, "Failed to save the selected appointment", "Save", JOptionPane.WARNING_MESSAGE);
+			FinalApplication.LOGGER.debug("Error", e);
 		} finally {
 			refreshApps();
 		}
@@ -427,16 +432,18 @@ public class FinalApplication extends JFrame{
 	}
 	
 	private void deleteApp() {
-		if (selected!=null) {
-		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selected +"?", "Delete", JOptionPane.YES_NO_OPTION)) {
+		FinalApplication.LOGGER.debug("Called delete function");
+		
+		if (selectedapp!=null) {
+		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selectedapp +"?", "Delete", JOptionPane.YES_NO_OPTION)) {
 			try {
 				selectedapp.delete();
 			} catch (final SQLException e) {
 				FinalApplication.LOGGER.error("WTF just happened",e);
 				JOptionPane.showMessageDialog(this, "Failed to delete the selected patient", "Delete", JOptionPane.WARNING_MESSAGE);;
 			} finally {
-				setSelectedPatient(null);
-				refreshDatapat();
+				setSelectedAppointment(null);
+				refreshApps();
 				}
 			}
 		}
@@ -461,7 +468,7 @@ public class FinalApplication extends JFrame{
 			appidTextField.setText(String.valueOf(appointment.getAppid()));
 			apppatidTextField.setText(String.valueOf(appointment.getPatid()));
 			appdridTextField.setText(String.valueOf(appointment.getDrid()));
-			appridTextField.setText(String.valueOf(appointment.getDrid()));
+			appridTextField.setText(String.valueOf(appointment.getRoomid()));
 			appstartTextField.setText(String.valueOf(appointment.getAstart()));
 			appendTextField.setText(String.valueOf(appointment.getAend()));
 			appcommentsTextArea.setText(String.valueOf(appointment.getAppcom()));

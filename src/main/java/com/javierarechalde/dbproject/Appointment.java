@@ -138,16 +138,8 @@ public class Appointment {
 		
 		final List<Appointment> Appointments = AppointmentsHelper.getInstance().getAppointments();
 		
-		Appointment.LOGGER.debug("Looking for key to delete...");
-		for(final Appointment Appointment : Appointments) {
-			Appointment.LOGGER.debug(".");
-			if (patid == Appointment.getPatid()) {
-				Appointment.LOGGER.debug("Key already in the table");
-				inlist = 1;
-			}
-		}
 		
-		if (inlist == 1) {
+		if (appid != -1) {
 			Appointment.LOGGER.debug("Appointment found in the table, Deleting...");
 			final String sql = "DELETE FROM APPOINTMENTS WHERE APPID = ?";
 			try (Connection connection = DBHelper.getConnection(); PreparedStatement pstmt = connection.prepareStatement(sql)){
@@ -162,41 +154,33 @@ public class Appointment {
 		
 		final List<Appointment> Appointments = AppointmentsHelper.getInstance().getAppointments();
 		
-		Appointment.LOGGER.debug("Looking for key in the table...");
-		for(final Appointment Appointment : Appointments) {
-			Appointment.LOGGER.debug(".");
-			if (patid == Appointment.getPatid()) {
-				Appointment.LOGGER.debug("Key in the table");
-				inlist = 1;
-			}
-		}
 		
 		try(Connection connection = DBHelper.getConnection();){
-			if (inlist == 0){
+			if (appid == -1){
 				Appointment.LOGGER.debug("Key not in the table, Inserting...");
-				final String sql = "INSERT INTO APPOINTMENTS (APPID,PATID,DRID,ROOMID,ASTART,AEND,APPCOM) VALUES (?, ?, ?, ?, ?, ?)";
+				final String sql = "INSERT INTO APPOINTMENTS (APPPATID,APPDRID,APPROOMID,ASTART,AEND,APPCOM) VALUES (?, ?, ?, ?, ?, ?)";
 				try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
-					pstmt.setInt(1, appid);
-					pstmt.setInt(2, patid);
-					pstmt.setInt(3, drid);
-					pstmt.setInt(4, roomid);
-					pstmt.setDate(5, astart);
-					pstmt.setDate(6, aend);
-					pstmt.setString(7, appcom);
+					pstmt.setInt(1, patid);
+					pstmt.setInt(2, drid);
+					pstmt.setInt(3, roomid);
+					pstmt.setDate(4, astart);
+					pstmt.setDate(5, aend);
+					pstmt.setString(6, appcom);
 					pstmt.execute();
 					
 				}
 			} else {	
 			Appointment.LOGGER.debug("Key already in the table, Updating...");
-			final String sql = "UPDATE APPOINTMENTS SET PATID = ?, DRID = ?, ROOMID = ?, ASTART = ?, AEND = ?, APPCOMM = ? WHERE APPID = ?";
+			Appointment.LOGGER.debug("Appointment id",appid);
+			final String sql = "UPDATE APPOINTMENTS SET APPPATID = ?, APPDRID = ?, APPROOMID = ?, ASTART = ?, AEND = ?, APPCOM = ? WHERE APPID = ?";
 			try (PreparedStatement pstmt = connection.prepareStatement(sql)){
-				pstmt.setInt(7, appid);
 				pstmt.setInt(1, patid);
 				pstmt.setInt(2, drid);
 				pstmt.setInt(3, roomid);
 				pstmt.setDate(4, astart);
 				pstmt.setDate(5, aend);
 				pstmt.setString(6, appcom);
+				pstmt.setInt(7, appid);
 				pstmt.execute();
 				
 			}

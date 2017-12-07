@@ -37,9 +37,9 @@ public class AppointmentsHelper {
 				AppointmentsHelper.LOGGER.info("Ayy we are doing it");
 				
 				Appointment.setAppid(rs.getInt("APPID"));
-				Appointment.setPatid(rs.getInt("PATID"));
-				Appointment.setDrid(rs.getInt("DRID"));
-				Appointment.setRoomid(rs.getInt("ROOMID"));
+				Appointment.setPatid(rs.getInt("APPPATID"));
+				Appointment.setDrid(rs.getInt("APPDRID"));
+				Appointment.setRoomid(rs.getInt("APPROOMID"));
 				Appointment.setAstart(rs.getDate("ASTART"));
 				Appointment.setAend(rs.getDate("AEND"));
 				Appointment.setAppcom(rs.getString("APPCOM"));
