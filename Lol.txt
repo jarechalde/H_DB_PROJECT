@@ -1,0 +1,85 @@
+
+		//Patient ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("PATIENT ID"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		patfnTextField = new JTextField();
+		apppanel.add(apppatidTextField, constraints);
+		
+		//Room ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("ROOM ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 3;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		patlnTextField = new JTextField();
+		apppanel.add(appridTextField, constraints);
+
+		//Start date of the appointment
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("START"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 4;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		patpnTextField = new JTextField();
+		apppanel.add(new JScrollPane(appstartTextField), constraints);
+				
+		
+		//End date of the appointment
+		constraints = new GridBagConstraints();
+		constraints.gridy = 5;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("END"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 5;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		paticTextField = new JTextField();
+		apppanel.add(new JScrollPane(appendTextField), constraints);
+		
+		
+		
+		//Comments on the appointment
+		constraints = new GridBagConstraints();
+		constraints.gridy = 6;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("COMMENTS"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 6;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		paticTextField = new JTextField();
+		apppanel.add(new JScrollPane(appcommentsTextField), constraints);

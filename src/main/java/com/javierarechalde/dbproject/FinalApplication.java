@@ -38,7 +38,7 @@ public class FinalApplication extends JFrame{
 	
 	private static final long serialVersionUID = 5162873977671955329L;
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(FinalApplication.class);
 	
 	//Panel for the main menu
 	private JPanel controlpanel = new JPanel(new GridLayout(2,2));
@@ -51,6 +51,15 @@ public class FinalApplication extends JFrame{
 	private JTextField patpnTextField;
 	private JTextField paticTextField;
 	
+	//Fields for the Appointments Layout
+	private JTextField appidTextField;
+	private JTextField apppatidTextField;
+	private JTextField appdridTextField;
+	private JTextField appridTextField;
+	private JTextField appstartTextField;
+	private JTextField appendTextField;
+	private JTextArea appcommentsTextArea;
+	
 	//Actions for the toolbar
 	private Action refreshAction;
 	private Action newAction;
@@ -61,8 +70,15 @@ public class FinalApplication extends JFrame{
 	private DefaultListModel<Patient> patientsListModel;
 	private JList<Patient> patientsList;
 	
+	//Lists for the appointments
+	private DefaultListModel<Appointment> appsListModel;
+	private JList<Appointment> appsList;
+	
 	//Variable for the selected patient
 	private Patient selected;
+	
+	//Variable for the selected appointment
+	private Appointment selectedapp;
 	
 	public FinalApplication() {
 		initUI();
@@ -70,23 +86,23 @@ public class FinalApplication extends JFrame{
 	}
 	
 	
-	private void refreshData() {
+	private void refreshDatapat() {
 		
-		roomsListModel.removeAllElements();
-		final SwingWorker<Void, Room> worker = new SwingWorker<Void, Room>() {
+		patientsListModel.removeAllElements();
+		final SwingWorker<Void, Patient> worker = new SwingWorker<Void, Patient>() {
 			@Override
 			protected Void doInBackground() throws Exception{
-				final List<Room> rooms = RoomsHelper.getInstance().getRooms();
-				for(final Room room: rooms) {
-					publish(room);
+				final List<Patient> patients = PatientsHelper.getInstance().getPatients();
+				for(final Patient patient: patients) {
+					publish(patient);
 				}
 				return null;
 			}
 			
 			@Override
-			protected void process(final List<Room> chunks) {
-				for(final Room room: chunks) {
-					roomsListModel.addElement(room);
+			protected void process(final List<Patient> chunks) {
+				for(final Patient patient: chunks) {
+					patientsListModel.addElement(patient);
 				}
 			}
 		};
@@ -95,25 +111,30 @@ public class FinalApplication extends JFrame{
 		
 	}
 	
-	private void createNew() {
-		Room room =  new Room();
-		room.setrid(000000);
-		room.setrcap(00);
-		room.setrtype("New Room Type");
-		setSelectedRoom(room);
+	private void createNewpat() {
+		Patient patient =  new Patient();
+		patient.setPatid(000000);
+		patient.setFname("First Name");
+		patient.setLname("Last Name");
+		patient.setPnumber(0000000000);
+		patient.setInscard(000000);
+		setSelectedPatient(patient);
 	}
 	
 	private void save() {
 		if (selected!=null) {
-		selected.setrid(Integer.parseInt(roomidTextField.getText()));
-		selected.setrcap(Integer.parseInt(rcapTextField.getText()));
-		selected.setrtype(rtypeTextField.getText());
+		selected.setPatid(Integer.parseInt(patidTextField.getText()));
+		selected.setFname(patfnTextField.getText());
+		selected.setLname(patlnTextField.getText());
+		selected.setPnumber(Integer.parseInt(patpnTextField.getText()));
+		selected.setInscard(Integer.parseInt(paticTextField.getText()));
+				
 		try{
 			selected.save();
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(this, "Failed to save the selected contact", "Save", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Failed to save the selected patient", "Save", JOptionPane.WARNING_MESSAGE);
 		} finally {
-			refreshData();
+			refreshDatapat();
 		}
 		}
 
@@ -125,13 +146,19 @@ public class FinalApplication extends JFrame{
 			try {
 				selected.delete();
 			} catch (final SQLException e) {
-				JOptionPane.showMessageDialog(this, "Failed to delete the selected room", "Delete", JOptionPane.WARNING_MESSAGE);;
+				FinalApplication.LOGGER.error("WTF just happened",e);
+				JOptionPane.showMessageDialog(this, "Failed to delete the selected patient", "Delete", JOptionPane.WARNING_MESSAGE);;
 			} finally {
 				setSelectedPatient(null);
-				refreshData();
+				refreshDatapat();
 				}
 			}
 		}
+	}
+	
+	//For creating the toolbar with icons
+	private ImageIcon load(final String name) {
+		return new ImageIcon(getClass().getResource("/icons/" + name + ".png"));
 	}
 	
 	private void initActions() {
@@ -141,7 +168,7 @@ public class FinalApplication extends JFrame{
 	
 				@Override
 				public void actionPerformed(final ActionEvent e) {
-					refreshData();
+					refreshDatapat();
 					
 				}
 			};
@@ -151,7 +178,7 @@ public class FinalApplication extends JFrame{
 	
 				@Override
 				public void actionPerformed(final ActionEvent e) {
-					createNew();
+					createNewpat();
 					
 				}
 			};
@@ -178,7 +205,6 @@ public class FinalApplication extends JFrame{
 		}
 	
 	//Creating the list of patients
-	
 	private JComponent createListPane() {
 		patientsListModel = new DefaultListModel<>();
 		patientsList = new JList<>(patientsListModel);
@@ -252,6 +278,189 @@ public class FinalApplication extends JFrame{
 			patpnTextField.setText(String.valueOf(patient.getPnumber()));
 			paticTextField.setText(String.valueOf(patient.getInscard()));	
 		}
+	}
+	
+	//Creating the list of appointments
+	private JComponent createListApp() {
+		appsListModel = new DefaultListModel<>();
+		appsList = new JList<>(appsListModel);
+		appsList.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if(!e.getValueIsAdjusting()) {
+					Appointment selectedapp = appsList.getSelectedValue();
+					setSelectedAppointment(selectedapp);
+				}
+			}
+		});
+		
+		return new JScrollPane(patientsList);
+	
+	}
+	
+	private JPanel createAppPanel() {
+		final JPanel apppanel =  new JPanel(new GridBagLayout());
+
+		//Appointment ID
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("Appointment ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appidTextField = new JTextField();
+		//roomidTextField.setEditable(false);
+		apppanel.add(appidTextField, constraints);
+		
+		//DR ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("DOCTOR ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appdridTextField = new JTextField();
+		apppanel.add(appdridTextField, constraints);
+		
+
+		//Patient ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("PATIENT ID"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		apppatidTextField = new JTextField();
+		apppanel.add(apppatidTextField, constraints);
+		
+		//Room ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("ROOM ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 3;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appridTextField = new JTextField();
+		apppanel.add(appridTextField, constraints);
+
+		//Start date of the appointment
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("START"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 4;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appstartTextField = new JTextField();
+		apppanel.add(new JScrollPane(appstartTextField), constraints);
+				
+		
+		//End date of the appointment
+		constraints = new GridBagConstraints();
+		constraints.gridy = 5;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("END"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 5;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appendTextField = new JTextField();
+		apppanel.add(new JScrollPane(appendTextField), constraints);
+		
+		
+		
+		//Comments on the appointment
+		constraints = new GridBagConstraints();
+		constraints.gridy = 6;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
+		constraints.insets = new Insets(2,2,2,2);
+		apppanel.add(new JLabel("COMMENTS"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 6;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appcommentsTextArea = new JTextArea();
+		apppanel.add(new JScrollPane(appcommentsTextArea), constraints);
+		
+		
+		
+		return apppanel;
+		
+	}
+	
+	private JPanel createDrSel() {
+		
+		final JPanel drselpanel = new JPanel(new GridLayout(2,1));
+		
+		//Buttons for the panel
+		final JButton appbutton = new JButton("Appointments");
+		final JButton diagbutton = new JButton("Diagnosis");
+		
+		drselpanel.add(appbutton);
+		drselpanel.add(diagbutton);
+		
+		appbutton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+            	FinalApplication.LOGGER.info("Creating appointment");
+                getContentPane().remove(drselpanel);
+                JPanel apppanel = createAppPanel();
+                add(apppanel);
+                add(createListApp(), BorderLayout.WEST);
+                //refreshPatients();
+                //JToolBar toolbar = createToolBar();
+                //add(toolbar, BorderLayout.NORTH);
+                getContentPane().invalidate();
+                getContentPane().validate();
+            	
+            }
+        });
+		
+		diagbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				FinalApplication.LOGGER.info("This is boring af");
+			}
+		});
+		
+
+		return drselpanel;
+		
 	}
 	
 	
@@ -360,7 +569,7 @@ public class FinalApplication extends JFrame{
 		DrButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
             getContentPane().remove(controlpanel);
-            add(patpanel, BorderLayout.CENTER);
+            add(createDrSel(), BorderLayout.CENTER);
             getContentPane().invalidate();
             getContentPane().validate();
             }
@@ -373,6 +582,8 @@ public class FinalApplication extends JFrame{
             add(patpanel);
             add(createListPane(), BorderLayout.WEST);
             refreshPatients();
+            JToolBar toolbar = createToolBar();
+            add(toolbar, BorderLayout.NORTH);
             getContentPane().invalidate();
             getContentPane().validate();
             	
