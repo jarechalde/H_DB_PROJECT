@@ -3,15 +3,19 @@ package com.javierarechalde.dbproject;
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.util.List;
 
 import javax.swing.AbstractAction;
+import javax.swing.AbstractButton;
 import javax.swing.Action;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,12 +30,12 @@ import javax.swing.SwingWorker;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Application extends JFrame{
 	
-	//private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
 	private static final long serialVersionUID = 2985602890713332714L;
 	
@@ -46,6 +50,12 @@ public class Application extends JFrame{
 	private Action newAction;
 	private Action saveAction;
 	private Action deleteAction;
+	
+	//Actions for the menu
+	private Action DoctorsAction;
+	private Action PatientsAction;
+	private Action StaffAction;
+	private Action FacilitiesAction;
 	
 	private Room selected;
 	
@@ -73,6 +83,7 @@ public class Application extends JFrame{
 	}
 	
 	private void refreshData() {
+		
 		roomsListModel.removeAllElements();
 		final SwingWorker<Void, Room> worker = new SwingWorker<Void, Room>() {
 			@Override
@@ -180,9 +191,23 @@ public class Application extends JFrame{
 
 	private void initComponents() {
 		
+		add(createMenu(), BorderLayout.PAGE_START);
 		add(createToolBar(), BorderLayout.PAGE_END);
 		add(createListPane(), BorderLayout.WEST);
-		add(createEditor(), BorderLayout.CENTER);
+		JComponent editor = createEditor();
+		add(editor, BorderLayout.CENTER);
+		
+	}
+	
+	private JToolBar createMenu() {
+		final JToolBar toolBar = new JToolBar();
+		toolBar.add(DoctorsAction);
+		toolBar.addSeparator();
+		toolBar.add(PatientsAction);
+		toolBar.addSeparator();
+		toolBar.add(FacilitiesAction);
+		toolBar.addSeparator();
+		toolBar.add(StaffAction);
 		
 	}
 	
@@ -215,6 +240,7 @@ public class Application extends JFrame{
 			rtypeTextField.setText( String.valueOf(room.getrtype()));
 		}
 	}
+	
 	
 	private JComponent createEditor() {
 		final JPanel panel =  new JPanel(new GridBagLayout());
