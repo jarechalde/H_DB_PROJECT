@@ -3,12 +3,14 @@ package com.javierarechalde.dbproject;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class Appointment {
 	
@@ -21,6 +23,187 @@ public class Appointment {
 	private Date astart;
 	private Date aend;
 	private String appcom;
+	
+	private String drname = null;
+	private String drlname = null;
+	private String drspecialty =  null;
+	
+	public String getdrname(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM DOCTORS WHERE DRID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the dr id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					drname = rs.getString("FNAME");
+					
+				}
+				
+			}
+	
+		}
+		
+		return drname;
+	}
+	
+	public String getdrlname(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM DOCTORS WHERE DRID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the dr id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					drlname = rs.getString("LNAME");
+					
+				}
+				
+			}
+	
+		}
+		
+		return drlname;
+	}
+	
+	public String getdrspecialty(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+		
+			final String sql = "SELECT * FROM DOCTORS WHERE DRID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the dr id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					drspecialty = rs.getString("SPECIALTY");
+					
+				}
+				
+			}
+	
+		}
+		
+		return drspecialty;
+	}
+	
+	
+	//Initializing variables for the patients data
+	private String patname = null;
+	private String patphone = null;
+	private String patlname = null;
+	
+	public String getpatname(int mything) throws SQLException{
+			
+			try(Connection connection = DBHelper.getConnection();){
+				final String sql = "SELECT * FROM PATIENTS WHERE PATID = ?";
+				try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+					
+					//Adding the patient id to the SQL statement
+					pstmt.setInt(1, mything);
+					ResultSet rs = pstmt.executeQuery();
+					
+					while (rs.next()){
+						
+						patname = rs.getString("FNAME");
+						
+					}
+					
+				}
+		
+			}
+			
+			return patname;
+	}
+	
+	public String getpatlname(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM PATIENTS WHERE PATID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the patient id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					patlname = rs.getString("LNAME");
+					
+				}
+				
+			}
+	
+		}
+		
+		return patlname;
+}
+	
+	public String getpatphone(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM PATIENTS WHERE PATID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the patient id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					patphone = rs.getString("PHONEN");
+					
+				}
+				
+			}
+	
+		}
+		
+		return patphone;
+	}
+	
+	private String diagcomm = null;
+	
+	public String getdiagcomm(int patid, int drid) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM DIAGNOSIS WHERE PATID = ? AND DRID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the patient id to the SQL statement
+				pstmt.setInt(1, patid);
+				pstmt.setInt(2, drid);
+				ResultSet rs = pstmt.executeQuery();
+				
+				//Saving all the diagnosis
+				while (rs.next()){
+					
+					if (diagcomm == null) {
+						diagcomm = rs.getString("DIAGCOMM") + " [" + rs.getString("DIAGDATE") + "]";
+					} else {
+						diagcomm = diagcomm + "\n" + rs.getString("DIAGCOMM")+ " [" + rs.getString("DIAGDATE") + "]";
+					}
+					
+					
+				}
+				
+			}
+			
+		}
+		
+		return diagcomm;
+	}
 	
 	public int getAppid() {
 		return appid;

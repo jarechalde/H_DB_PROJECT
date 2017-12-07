@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.util.Date;
 import java.util.List;
 
 import java.sql.Date;
@@ -550,23 +550,50 @@ public class FinalApplication extends JFrame{
 			
 		} else {
 			
-			//Now we need to create a method in the appointments class to get drs id and 
-			drnameTF.setText(String.valueOf(appointmentshow.getAppid()));
-			drlnameTF.setText(String.valueOf(appointmentshow.getPatid()));
-			drspecialtyTF.setText("");
-			patnameTF.setText("");
-			patlnameTF.setText("");
-			appendTF.setText("");
-			appstartTF.setText("");
-			approomTF.setText("");
-			appdiagTA.setText("");
-			appcommTA.setText("");
+		
+			int drid  = appointmentshow.getDrid();
+			int patid = appointmentshow.getPatid();
 			
-			//appdridTextField.setText(String.valueOf(appointmentshow.getDrid()));
-			//appridTextField.setText(String.valueOf(appointmentshow.getRoomid()));
-			//appstartTextField.setText(String.valueOf(appointmentshow.getAstart()));
-			//appendTextField.setText(String.valueOf(appointmentshow.getAend()));
-			//appcommentsTextArea.setText(String.valueOf(appointmentshow.getAppcom()));
+			try {
+				String fname = appointmentshow.getdrname(drid);
+				drnameTF.setText(String.valueOf(fname));
+				
+				String lname = appointmentshow.getdrlname(drid);
+				drlnameTF.setText(String.valueOf(lname));
+				
+
+				String drspecialty = appointmentshow.getdrspecialty(drid);
+				drspecialtyTF.setText(String.valueOf(drspecialty));
+				
+				String patname = appointmentshow.getpatname(patid);
+				System.out.println(patname);
+				patnameTF.setText(String.valueOf(patname));
+				
+				String patlname = appointmentshow.getpatlname(patid);
+				System.out.println(patlname);
+				patlnameTF.setText(String.valueOf(patlname));
+				
+				String patphone = appointmentshow.getpatphone(patid);
+				System.out.println(patphone);
+				patphoneTF.setText(String.valueOf(patphone));
+
+				String diagcomm = appointmentshow.getdiagcomm(patid,drid);
+				appdiagTA.setText(String.valueOf(diagcomm));
+				
+				
+			} catch (SQLException e) {
+				FinalApplication.LOGGER.error("Error", e);
+			}
+			
+			
+
+			approomTF.setText(String.valueOf(appointmentshow.getRoomid()));
+			appstartTF.setText(String.valueOf(appointmentshow.getAstart()));
+			appendTF.setText(String.valueOf(appointmentshow.getAend()));
+			appcommTA.setText(String.valueOf(appointmentshow.getAppcom()));
+	
+		
+			
 		}
 	}
 	
@@ -729,12 +756,68 @@ public class FinalApplication extends JFrame{
 		
 		diagbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				FinalApplication.LOGGER.info("This is boring af");
+				FinalApplication.LOGGER.info("Going to Diagnosis menu");
+                getContentPane().remove(drselpanel);
+                JPanel diagpanel = createDiagSel();
+                add(diagpanel);
+                getContentPane().invalidate();
+                getContentPane().validate();
+				
 			}
 		});
 		
 
 		return drselpanel;
+		
+	}
+	
+	private JPanel createDiagSel() {
+		
+		final JPanel diagselpanel = new JPanel(new GridLayout(2,1));
+		
+		//Buttons for the panel
+		final JButton seediag = new JButton("See Diagnosis");
+		final JButton editdiag = new JButton("Edit Diagnosis");
+		
+		//Adding the buttons to the panel
+		diagselpanel.add(seediag);
+		diagselpanel.add(editdiag);
+		
+		seediag.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+            	FinalApplication.LOGGER.info("Seeing Appointments");
+            	getContentPane().remove(diagselpanel);
+            	JComponent listappshow = createListAppShow();
+            	add(listappshow, BorderLayout.WEST);
+            	JPanel appui = appointmentUI();
+            	add(appui, BorderLayout.CENTER);
+            	
+            	//Adding appointments to the panel
+            	refreshAppsShow();
+                getContentPane().invalidate();
+                getContentPane().validate();
+            	
+            }
+        });
+		
+		editdiag.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				FinalApplication.LOGGER.info("Editing Appointments");
+                getContentPane().remove(diagselpanel);
+                JPanel apppanel = createAppPanel();
+                add(apppanel);
+                JComponent listapp = createListApp();
+                add(listapp, BorderLayout.WEST);
+                refreshApps();
+                JToolBar toolbarapp = createToolBarApp();
+                add(toolbarapp, BorderLayout.NORTH);
+                getContentPane().invalidate();
+                getContentPane().validate();
+			}
+		});
+		
+
+		return diagselpanel;
 		
 	}
 	
