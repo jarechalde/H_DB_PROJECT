@@ -1,0 +1,9 @@
+This is the manual for the database application.
+
+INSTALLATION
+
+This application does not require any installation, in order to use it, just 
+
+To navigate between menus, you will have to click into different options.
+
+1. Main screen:

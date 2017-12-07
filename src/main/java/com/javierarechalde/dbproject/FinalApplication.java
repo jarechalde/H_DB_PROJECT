@@ -367,6 +367,60 @@ public class FinalApplication extends JFrame{
 	
 	}
 	
+
+	//Lists for the appointments show
+	private DefaultListModel<Appointment> appsListModelShow;
+	private JList<Appointment> appsListShow;
+	
+	//Variable for the selected appointment show
+	private Appointment selectedappshow;
+	
+	//List of appointments to show the appointments
+	private JComponent createListAppShow() {
+		appsListModelShow = new DefaultListModel<>();
+		appsListShow = new JList<>(appsListModelShow);
+		appsListShow.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if(!e.getValueIsAdjusting()) {
+					Appointment selectedappshow = appsListShow.getSelectedValue();
+					setSelectedAppointmentShow(selectedappshow);
+				}
+			}
+		});
+		
+		return new JScrollPane(appsListShow);
+	
+	}
+	
+	//Refreshing the appointments show
+	private void refreshAppsShow() {
+		
+		FinalApplication.LOGGER.info("Refreshing Appointments");
+		
+		appsListModelShow.removeAllElements();
+		final SwingWorker<Void, Appointment> worker = new SwingWorker<Void, Appointment>() {
+			@Override
+			protected Void doInBackground() throws Exception{
+				final List<Appointment> appointments = AppointmentsHelper.getInstance().getAppointments();
+				for(final Appointment appointment: appointments) {
+					publish(appointment);
+				}
+				return null;
+			}
+			
+			@Override
+			protected void process(final List<Appointment> chunks) {
+				for(final Appointment appointment: chunks) {
+					appsListModelShow.addElement(appointment);
+				}
+			}
+		};
+		
+		worker.execute();
+		
+	}
+	
 	//Function for refreshing the appointment list
 	private void refreshApps() {
 		
@@ -454,6 +508,8 @@ public class FinalApplication extends JFrame{
 		
 		this.selectedapp = appointment;
 		
+		FinalApplication.LOGGER.info("Appointment", appointment);
+		
 		if(appointment==null) {
 			appidTextField.setText("");
 			apppatidTextField.setText("");
@@ -472,6 +528,45 @@ public class FinalApplication extends JFrame{
 			appstartTextField.setText(String.valueOf(appointment.getAstart()));
 			appendTextField.setText(String.valueOf(appointment.getAend()));
 			appcommentsTextArea.setText(String.valueOf(appointment.getAppcom()));
+		}
+	}
+	
+	//Set the selected appointment to show
+	private void setSelectedAppointmentShow(Appointment appointmentshow) {
+		
+		this.selectedappshow = appointmentshow;
+		
+		if(appointmentshow==null) {
+			drnameTF.setText("");
+			drlnameTF.setText("");
+			drspecialtyTF.setText("");
+			patnameTF.setText("");
+			patlnameTF.setText("");
+			appendTF.setText("");
+			appstartTF.setText("");
+			approomTF.setText("");
+			appdiagTA.setText("");
+			appcommTA.setText("");
+			
+		} else {
+			
+			//Now we need to create a method in the appointments class to get drs id and 
+			drnameTF.setText(String.valueOf(appointmentshow.getAppid()));
+			drlnameTF.setText(String.valueOf(appointmentshow.getPatid()));
+			drspecialtyTF.setText("");
+			patnameTF.setText("");
+			patlnameTF.setText("");
+			appendTF.setText("");
+			appstartTF.setText("");
+			approomTF.setText("");
+			appdiagTA.setText("");
+			appcommTA.setText("");
+			
+			//appdridTextField.setText(String.valueOf(appointmentshow.getDrid()));
+			//appridTextField.setText(String.valueOf(appointmentshow.getRoomid()));
+			//appstartTextField.setText(String.valueOf(appointmentshow.getAstart()));
+			//appendTextField.setText(String.valueOf(appointmentshow.getAend()));
+			//appcommentsTextArea.setText(String.valueOf(appointmentshow.getAppcom()));
 		}
 	}
 	
@@ -651,6 +746,7 @@ public class FinalApplication extends JFrame{
 		final JButton seeapp = new JButton("See Appointments");
 		final JButton editapp = new JButton("Edit Appointments");
 		
+		//Adding the buttons to the panel
 		appselpanel.add(seeapp);
 		appselpanel.add(editapp);
 		
@@ -658,8 +754,13 @@ public class FinalApplication extends JFrame{
             public void actionPerformed(ActionEvent ae) {
             	FinalApplication.LOGGER.info("Seeing Appointments");
             	getContentPane().remove(appselpanel);
-            	JPanel hola = appointmentUI();
-            	add(hola);
+            	JComponent listappshow = createListAppShow();
+            	add(listappshow, BorderLayout.WEST);
+            	JPanel appui = appointmentUI();
+            	add(appui, BorderLayout.CENTER);
+            	
+            	//Adding appointments to the panel
+            	refreshAppsShow();
                 getContentPane().invalidate();
                 getContentPane().validate();
             	
@@ -870,14 +971,12 @@ public class FinalApplication extends JFrame{
 		//Diagnosis Area
 		constraints = new GridBagConstraints();
 		constraints.gridy = 4;
-		constraints.gridx = 1;
 		constraints.anchor = GridBagConstraints.CENTER;
 		constraints.insets = new Insets(2,2,2,2);
 		appui.add(new JLabel("Diagnosis"), constraints);
 
 		constraints = new GridBagConstraints();
 		constraints.gridy = 5;
-		constraints.gridx = 1;
 		constraints.weightx = 1;
 		constraints.weighty = 1;
 		constraints.anchor = GridBagConstraints.CENTER;
