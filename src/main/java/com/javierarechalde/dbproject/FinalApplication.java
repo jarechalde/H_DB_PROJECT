@@ -602,7 +602,7 @@ public class FinalApplication extends JFrame{
 		
 	}
 	
-	private JPanel createDrSel() {
+	public JPanel createDrSel() {
 		
 		final JPanel drselpanel = new JPanel(new GridLayout(2,1));
 		
@@ -616,15 +616,16 @@ public class FinalApplication extends JFrame{
 		appbutton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
             	FinalApplication.LOGGER.info("Creating appointment");
+            	//createAppSel();
                 getContentPane().remove(drselpanel);
-                JPanel apppanel = createAppPanel();
+                JPanel apppanel = createAppSel();
                 add(apppanel);
-                JComponent listapp = createListApp();
-                add(listapp, BorderLayout.WEST);
-                refreshApps();
+                //JComponent listapp = createListApp();
+                //add(listapp, BorderLayout.WEST);
+                //refreshApps();
                 //Have to create another toolbar for the appointments, or at least modify the existing one
-                JToolBar toolbarapp = createToolBarApp();
-                add(toolbarapp, BorderLayout.NORTH);
+                //JToolBar toolbarapp = createToolBarApp();
+                //add(toolbarapp, BorderLayout.NORTH);
                 getContentPane().invalidate();
                 getContentPane().validate();
             	
@@ -642,6 +643,270 @@ public class FinalApplication extends JFrame{
 		
 	}
 	
+	private JPanel createAppSel() {
+		
+		final JPanel appselpanel = new JPanel(new GridLayout(2,1));
+		
+		//Buttons for the panel
+		final JButton seeapp = new JButton("See Appointments");
+		final JButton editapp = new JButton("Edit Appointments");
+		
+		appselpanel.add(seeapp);
+		appselpanel.add(editapp);
+		
+		seeapp.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+            	FinalApplication.LOGGER.info("Seeing Appointments");
+            	getContentPane().remove(appselpanel);
+            	JPanel hola = appointmentUI();
+            	add(hola);
+                getContentPane().invalidate();
+                getContentPane().validate();
+            	
+            }
+        });
+		
+		editapp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				FinalApplication.LOGGER.info("Editing Appointments");
+                getContentPane().remove(appselpanel);
+                JPanel apppanel = createAppPanel();
+                add(apppanel);
+                JComponent listapp = createListApp();
+                add(listapp, BorderLayout.WEST);
+                refreshApps();
+                JToolBar toolbarapp = createToolBarApp();
+                add(toolbarapp, BorderLayout.NORTH);
+                getContentPane().invalidate();
+                getContentPane().validate();
+			}
+		});
+		
+
+		return appselpanel;
+		
+	}
+	
+	//Some variables for the appointment ui
+	private JTextField drnameTF;
+	private JTextField drlnameTF; 
+	private JTextField drspecialtyTF;
+	private JTextField patnameTF;
+	private JTextField patlnameTF;
+	private JTextField patphoneTF;
+	private JTextField appendTF;
+	private JTextField appstartTF;
+	private JTextField approomTF;
+	private JTextArea appdiagTA;
+	private JTextArea appcommTA;
+	
+	private JPanel appointmentUI(){
+
+		//Creating the component for the patients
+		final JPanel appui = new JPanel(new GridBagLayout());
+		
+		//DR Name
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Dr. First Name"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.weightx = 1;
+		constraints.gridy = 1;
+		constraints.gridx = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		drnameTF = new JTextField();
+		appui.add(drnameTF, constraints);
+				
+		//DR Last Name
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.gridx = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Dr. Last Name"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.gridx = 4;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		drlnameTF = new JTextField();
+		appui.add(drlnameTF, constraints);
+		
+		//DR Specialty
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.gridx = 5;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Specialty"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.gridx = 6;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		drspecialtyTF = new JTextField();
+		appui.add(drspecialtyTF, constraints);
+		
+		//Patient First Name
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Pat. First Name"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.weightx = 1;
+		constraints.gridy = 2;
+		constraints.gridx = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		patnameTF = new JTextField();
+		appui.add(patnameTF, constraints);
+				
+		//PAtient last name
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Pat. Last Name"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 4;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		patlnameTF = new JTextField();
+		appui.add(patlnameTF, constraints);
+		
+		//PAtient Phone N
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 5;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Pat. Phone N"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 6;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		patphoneTF = new JTextField();
+		appui.add(patphoneTF, constraints);
+		
+		//Appointment Room
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Room"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 2;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		approomTF = new JTextField();
+		appui.add(approomTF, constraints);
+		
+		//Appointment Start Date
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Start"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 4;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appstartTF = new JTextField();
+		appui.add(appstartTF, constraints);
+		
+		//Appointment End Date
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 5;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("End"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 6;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appendTF = new JTextField();
+		appui.add(appendTF, constraints);
+		
+		//Diagnosis Area
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Diagnosis"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 5;
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appdiagTA = new JTextArea();
+		appui.add(appdiagTA, constraints);
+		
+		//Appointment Comments
+		constraints = new GridBagConstraints();
+		constraints.gridy = 6;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets = new Insets(2,2,2,2);
+		appui.add(new JLabel("Comments"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 7;
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		appcommTA = new JTextArea();
+		appui.add(appcommTA, constraints);
+		
+		return appui;
+	}
 	
 	private void initUI() {
 		//Buttons for the main frame
