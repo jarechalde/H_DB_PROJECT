@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.AbstractAction;
@@ -66,6 +67,12 @@ public class FinalApplication extends JFrame{
 	private Action saveAction;
 	private Action deleteAction;
 	
+	//Actions for the appointments toolbar
+	private Action refreshActionApp;
+	private Action newActionApp;
+	private Action saveActionApp;
+	private Action deleteActionApp;
+	
 	//List for the patients
 	private DefaultListModel<Patient> patientsListModel;
 	private JList<Patient> patientsList;
@@ -83,6 +90,7 @@ public class FinalApplication extends JFrame{
 	public FinalApplication() {
 		initUI();
 		initActions();
+		initActionsApp();
 	}
 	
 	
@@ -159,6 +167,50 @@ public class FinalApplication extends JFrame{
 	//For creating the toolbar with icons
 	private ImageIcon load(final String name) {
 		return new ImageIcon(getClass().getResource("/icons/" + name + ".png"));
+	}
+	
+	//Actions for the appointments toolbar
+	private void initActionsApp() {
+		
+		refreshActionApp = new AbstractAction("RefreshApp", load("Refresh")) {
+			private static final long serialVersionUID = -3876237444679320139L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				refreshDataApp();
+				
+			}
+		};
+		
+		newActionApp = new AbstractAction("NewApp", load("New")) {
+			private static final long serialVersionUID = -605237333970985709L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				createNewApp();
+				
+			}
+		};
+		
+		saveActionApp = new AbstractAction("SaveApp", load("Save")) {
+			private static final long serialVersionUID = 2918460914014829628L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				saveApp();
+				
+			}
+		};
+		
+		deleteActionApp = new AbstractAction("DeleteApp", load("Delete")) {
+			private static final long serialVersionUID = 9008483889368221463L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				deleteApp();
+				
+			}
+		};
 	}
 	
 	private void initActions() {
@@ -260,7 +312,20 @@ public class FinalApplication extends JFrame{
 		
 		return toolBar;
 	}
-			
+		
+	private JToolBar createToolBarApp() {
+		final JToolBar toolBar = new JToolBar();
+		toolBar.add(refreshActionApp);
+		toolBar.addSeparator();
+		toolBar.add(newActionApp);
+		toolBar.addSeparator();
+		toolBar.add(saveActionApp);
+		toolBar.addSeparator();
+		toolBar.add(deleteActionApp);
+		
+		return toolBar;
+	}
+	
 	private void setSelectedPatient(Patient patient) {
 		
 		this.selected = patient;
@@ -294,8 +359,113 @@ public class FinalApplication extends JFrame{
 			}
 		});
 		
-		return new JScrollPane(patientsList);
+		return new JScrollPane(appsList);
 	
+	}
+	
+	//Function for refreshing the appointment list
+	private void refreshApps() {
+		
+		FinalApplication.LOGGER.info("Refreshing Appointments");
+		
+		appsListModel.removeAllElements();
+		final SwingWorker<Void, Appointment> worker = new SwingWorker<Void, Appointment>() {
+			@Override
+			protected Void doInBackground() throws Exception{
+				final List<Appointment> Appointments = AppointmentsHelper.getInstance().getAppointments();
+				for(final Appointment Appointment: Appointments) {
+					publish(Appointment);
+				}
+				return null;
+			}
+			
+			@Override
+			protected void process(final List<Appointment> chunks) {
+				for(final Appointment Appointment: chunks) {
+					appsListModel.addElement(Appointment);
+				}
+			}
+		};
+		
+		worker.execute();
+		
+	}
+	
+	private void createNewApp() {
+		
+		Appointment appointment =  new Appointment();
+		appointment.setAppid(default);
+		appointment.setPatid(000000);
+		appointment.setDrid(000000);
+		appointment.setRoomid(000000);
+		appointment.setAstart('2017-01-01');
+		appointment.setAend('2017-01-01');
+		appointment.setAppcom("eeeey macarena aaaaay");
+		setSelectedAppointment(appointment);
+		
+	}
+	
+	private void saveApp() {
+		
+		if (selectedapp!=null) {
+		selectedapp.setPatid(Integer.parseInt(apppatidTextField.getText()));
+		selectedapp.setDrid(Integer.parseInt(appdridTextField.getText()));
+		selectedapp.setRoomid(Integer.parseInt(appridTextField.getText()));
+		selectedapp.setAstart(Date.parse(appstartTextField.getText()));
+		selectedapp.setAend(Date.parse(appendTextField.getText()));
+		selectedapp.setAppcom(appcommentsTextArea.getText());
+				
+		try{
+			selectedapp.save();
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(this, "Failed to save the selected appointment", "Save", JOptionPane.WARNING_MESSAGE);
+		} finally {
+			refreshApps();
+		}
+		}
+
+	}
+	
+	private void deleteApp() {
+		if (selected!=null) {
+		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selected +"?", "Delete", JOptionPane.YES_NO_OPTION)) {
+			try {
+				selectedapp.delete();
+			} catch (final SQLException e) {
+				FinalApplication.LOGGER.error("WTF just happened",e);
+				JOptionPane.showMessageDialog(this, "Failed to delete the selected patient", "Delete", JOptionPane.WARNING_MESSAGE);;
+			} finally {
+				setSelectedPatient(null);
+				refreshDatapat();
+				}
+			}
+		}
+	}
+	
+	//Function for when we select and appointment
+	private void setSelectedAppointment(Appointment appointment) {
+		
+		this.selectedapp = appointment;
+		
+		if(appointment==null) {
+			appidTextField.setText("");
+			apppatidTextField.setText("");
+			appdridTextField.setText("");
+			appridTextField.setText("");
+			appstartTextField.setText("");
+			appendTextField.setText("");
+			appcommentsTextArea.setText("");
+			
+		} else {
+			
+			appidTextField.setText(String.valueOf(appointment.getAppid()));
+			apppatidTextField.setText(String.valueOf(appointment.getPatid()));
+			appdridTextField.setText(String.valueOf(appointment.getDrid()));
+			appridTextField.setText(String.valueOf(appointment.getDrid()));
+			appstartTextField.setText(String.valueOf(appointment.getAstart()));
+			appendTextField.setText(String.valueOf(appointment.getAend()));
+			appcommentsTextArea.setText(String.valueOf(appointment.getAppcom()));
+		}
 	}
 	
 	private JPanel createAppPanel() {
@@ -313,7 +483,7 @@ public class FinalApplication extends JFrame{
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		appidTextField = new JTextField();
-		//roomidTextField.setEditable(false);
+		appidTextField.setEditable(false);
 		apppanel.add(appidTextField, constraints);
 		
 		//DR ID
@@ -442,10 +612,12 @@ public class FinalApplication extends JFrame{
                 getContentPane().remove(drselpanel);
                 JPanel apppanel = createAppPanel();
                 add(apppanel);
-                add(createListApp(), BorderLayout.WEST);
-                //refreshPatients();
-                //JToolBar toolbar = createToolBar();
-                //add(toolbar, BorderLayout.NORTH);
+                JComponent listapp = createListApp();
+                add(listapp, BorderLayout.WEST);
+                refreshApps();
+                //Have to create another toolbar for the appointments, or at least modify the existing one
+                JToolBar toolbarapp = createToolBarApp();
+                add(toolbarapp, BorderLayout.NORTH);
                 getContentPane().invalidate();
                 getContentPane().validate();
             	

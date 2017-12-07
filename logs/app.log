@@ -2743,3 +2743,248 @@ DELETE FROM PATIENTS WHERE PATID = ? [23503-170]
 2017-Dec-06 22:16:03.527 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
 2017-Dec-06 22:16:04.656 [AWT-EventQueue-0] INFO FinalApplication.java:417 - Creating appointment
 2017-Dec-06 22:24:44.728 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:51:12.721 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:51:12.724 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:51:12.751 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:51:13.213 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:51:14.763 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:51:29.300 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:51:30.495 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:51:30.498 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:51:30.524 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:51:31.010 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:51:32.056 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:51:44.127 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:51:45.511 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:51:45.514 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:51:45.540 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:51:45.999 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:51:47.052 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:51:54.844 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:52:22.078 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:52:22.081 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:52:22.110 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:52:22.577 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:52:23.868 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:52:26.537 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:55:06.073 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:55:06.076 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:55:06.102 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:55:06.565 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:55:07.715 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:55:09.120 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:57:24.080 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:57:24.083 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:57:24.108 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:57:24.595 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:57:25.768 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:57:39.999 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:57:46.673 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:57:46.675 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:57:46.706 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:57:47.172 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:57:48.189 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:57:49.470 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:57:56.857 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:57:56.859 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:57:56.886 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:57:57.342 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:57:58.516 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:58:02.884 [AWT-EventQueue-0] DEBUG Patient.java:124 - Looking for key in the table...
+2017-Dec-06 22:58:02.884 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:02.885 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:02.885 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:02.885 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:02.885 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:02.885 [AWT-EventQueue-0] DEBUG Patient.java:135 - Key not in the table, Inserting...
+2017-Dec-06 22:58:03.312 [AWT-EventQueue-0] DEBUG Patient.java:124 - Looking for key in the table...
+2017-Dec-06 22:58:03.312 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:03.312 [AWT-EventQueue-0] DEBUG Patient.java:128 - Key in the table
+2017-Dec-06 22:58:03.312 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:03.313 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:03.314 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:03.314 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:03.314 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-06 22:58:03.314 [AWT-EventQueue-0] DEBUG Patient.java:147 - Key already in the table, Updating...
+2017-Dec-06 22:58:06.266 [AWT-EventQueue-0] WARN Patient.java:94 - Called Delete function
+2017-Dec-06 22:58:06.268 [AWT-EventQueue-0] DEBUG Patient.java:96 - 0
+2017-Dec-06 22:58:06.268 [AWT-EventQueue-0] DEBUG Patient.java:100 - Looking for key to delete...
+2017-Dec-06 22:58:06.268 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-06 22:58:06.268 [AWT-EventQueue-0] DEBUG Patient.java:104 - Key already in the table
+2017-Dec-06 22:58:06.269 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-06 22:58:06.269 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-06 22:58:06.269 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-06 22:58:06.269 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-06 22:58:06.269 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-06 22:58:06.269 [AWT-EventQueue-0] DEBUG Patient.java:110 - Patient found in the table, Deleting...
+2017-Dec-06 22:58:08.016 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 22:58:52.439 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 22:58:52.441 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 22:58:52.467 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 22:58:52.946 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 22:58:53.999 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 22:59:36.608 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:03:23.829 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:03:23.832 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:03:23.858 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:03:36.230 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:03:36.232 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:03:36.260 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:03:36.715 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-06 23:03:42.993 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:03:42.995 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:03:43.022 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:03:53.617 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:03:53.619 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:03:53.649 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:03:54.120 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-06 23:04:27.297 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:04:27.299 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:04:27.326 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:04:38.702 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:04:38.704 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:04:38.732 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:04:39.156 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-06 23:05:13.843 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:05:13.846 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:05:13.872 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:05:14.300 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-06 23:06:50.226 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:06:50.229 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:06:50.256 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:06:50.688 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-06 23:07:27.656 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:07:27.658 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:07:27.684 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:07:28.177 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:07:30.021 [AWT-EventQueue-0] INFO FinalApplication.java:467 - Creating appointment
+2017-Dec-06 23:10:53.968 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:10:55.555 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:10:55.557 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:10:55.586 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:10:56.069 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:11:03.053 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:03.591 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:05.321 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:05.510 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:05.645 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:05.762 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:05.878 [AWT-EventQueue-0] INFO FinalApplication.java:512 - This is boring af
+2017-Dec-06 23:11:21.722 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:11:21.724 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:11:21.751 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:11:25.626 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:11:30.376 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:11:30.378 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:11:30.402 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:11:30.855 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:11:32.025 [AWT-EventQueue-0] INFO FinalApplication.java:493 - Creating appointment
+2017-Dec-06 23:13:13.410 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:13:13.412 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:13:13.442 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:13:15.697 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:13:17.631 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:13:17.634 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:13:17.659 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:13:18.144 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:13:19.623 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:13:19.647 [AWT-EventQueue-0] INFO FinalApplication.java:304 - WTF IS GOING ON
+2017-Dec-06 23:14:21.061 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:14:22.626 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:14:22.629 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:14:22.659 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:14:23.132 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:14:24.386 [AWT-EventQueue-0] INFO FinalApplication.java:496 - Creating appointment
+2017-Dec-06 23:14:24.410 [AWT-EventQueue-0] INFO FinalApplication.java:304 - WTF IS GOING ON
+2017-Dec-06 23:14:28.058 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:15:01.179 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:15:01.182 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:15:01.211 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:15:01.642 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-06 23:15:50.502 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:15:50.504 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:15:50.531 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:15:58.803 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:15:58.805 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:15:58.833 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:15:59.339 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:16:00.917 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:16:00.941 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:17:25.403 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:17:26.739 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:17:26.742 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:17:26.768 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:17:27.251 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:17:28.995 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:17:29.019 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:18:26.958 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:18:28.500 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:18:28.502 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:18:28.527 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:18:28.998 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:18:30.191 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:18:30.216 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:18:32.842 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:20:36.675 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:20:36.678 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:20:36.704 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:20:37.189 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:20:38.198 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:20:38.222 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:20:40.881 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:21:07.098 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:21:07.100 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:21:07.130 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:21:07.583 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:21:08.686 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:21:08.710 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:21:08.714 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-06 23:21:43.716 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:21:43.718 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:21:43.744 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:21:45.779 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:21:47.217 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:21:47.219 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:21:47.244 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:21:47.690 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:21:48.825 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:21:48.849 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:21:48.852 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-06 23:22:32.513 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:22:35.110 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:22:35.113 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:22:35.142 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:22:35.625 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:22:37.998 [AWT-EventQueue-0] INFO FinalApplication.java:513 - This is boring af
+2017-Dec-06 23:22:38.339 [AWT-EventQueue-0] INFO FinalApplication.java:513 - This is boring af
+2017-Dec-06 23:22:38.472 [AWT-EventQueue-0] INFO FinalApplication.java:513 - This is boring af
+2017-Dec-06 23:22:38.612 [AWT-EventQueue-0] INFO FinalApplication.java:513 - This is boring af
+2017-Dec-06 23:22:38.739 [AWT-EventQueue-0] INFO FinalApplication.java:513 - This is boring af
+2017-Dec-06 23:22:39.078 [AWT-EventQueue-0] INFO FinalApplication.java:495 - Creating appointment
+2017-Dec-06 23:22:39.103 [AWT-EventQueue-0] INFO FinalApplication.java:304 - Refreshing Appointments
+2017-Dec-06 23:22:39.107 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-06 23:22:45.918 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:31:10.300 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:31:10.302 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:31:10.327 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:31:10.800 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:31:11.989 [AWT-EventQueue-0] INFO FinalApplication.java:606 - Creating appointment
+2017-Dec-06 23:31:12.014 [AWT-EventQueue-0] INFO FinalApplication.java:368 - Refreshing Appointments
+2017-Dec-06 23:31:12.018 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-06 23:31:31.511 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:40:08.939 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:40:08.942 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:40:08.972 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:40:09.429 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:40:10.826 [AWT-EventQueue-0] INFO FinalApplication.java:611 - Creating appointment
+2017-Dec-06 23:40:10.850 [AWT-EventQueue-0] INFO FinalApplication.java:369 - Refreshing Appointments
+2017-Dec-06 23:40:10.854 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-06 23:40:18.214 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-06 23:40:24.136 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-06 23:40:24.138 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-06 23:40:24.170 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-06 23:40:24.633 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-06 23:40:25.868 [AWT-EventQueue-0] INFO FinalApplication.java:611 - Creating appointment
+2017-Dec-06 23:40:25.892 [AWT-EventQueue-0] INFO FinalApplication.java:369 - Refreshing Appointments
+2017-Dec-06 23:40:25.896 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-06 23:40:28.299 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source

@@ -44,3 +44,7 @@ INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES
     (098967,5,'Op. Room'),
     (097827,5,'Op. Room'), 
     (896547,4,'Bedroom');
+    
+--Populating the appointments table
+INSERT INTO APPOINTMENTS (APPID, PATID, DRID, ROOMID, ASTART, AEND, APPCOM) VALUES
+	(default, 032547,021427,098257,'2017-02-12','2017-03-12','Ayyy lets do it bb');
