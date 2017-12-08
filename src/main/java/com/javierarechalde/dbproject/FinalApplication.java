@@ -95,6 +95,7 @@ public class FinalApplication extends JFrame{
 		initUI();
 		initActions();
 		initActionsApp();
+		initActionsDiag();
 	}
 	
 	
@@ -260,6 +261,112 @@ public class FinalApplication extends JFrame{
 			};
 		}
 	
+	//Creating the actions for the diagnosis
+	private Action refreshActionDiag;
+	private Action newActionDiag;
+	private Action saveActionDiag;
+	private Action deleteActionDiag;
+	
+	//Actions for the diagnosis toolbar
+	private void initActionsDiag() {
+		
+		refreshActionDiag = new AbstractAction("RefreshDiag", load("Refresh")) {
+			private static final long serialVersionUID = -3876237444679320139L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				refreshDiags();
+				
+			}
+		};
+		
+		newActionDiag = new AbstractAction("NewApp", load("New")) {
+			private static final long serialVersionUID = -605237333970985709L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				createNewDiag();
+				
+			}
+		};
+		
+		saveActionDiag = new AbstractAction("SaveApp", load("Save")) {
+			private static final long serialVersionUID = 2918460914014829628L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				saveDiag();
+				
+			}
+		};
+		
+		deleteActionDiag = new AbstractAction("DeleteApp", load("Delete")) {
+			private static final long serialVersionUID = 9008483889368221463L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				deleteDiag();
+				
+			}
+		};
+	}
+	
+	//Functions for the diagnosis panel
+	
+	private void createNewDiag() {
+		
+		Diagnosis diagnosis = new Diagnosis();
+		
+		diagnosis.setDiagid(-1);
+		diagnosis.setDrid(000000);
+		diagnosis.setPatid(000000);
+		diagnosis.setDiagdate(java.sql.Date.valueOf("2015-01-01"));
+		diagnosis.setDiagcomm("Comments go here");
+		
+		setSelectedDiagnosis(diagnosis);
+		
+	}
+	
+	private void saveDiag() {
+		
+		if (selecteddiag!=null) {
+		
+		selecteddiag.setDiagid(Integer.parseInt(diagidTF.getText()));
+		selecteddiag.setDrid(Integer.parseInt(diagdridTF.getText()));
+		selecteddiag.setPatid(Integer.parseInt(diagpatidTF.getText()));
+		selecteddiag.setDiagdate(java.sql.Date.valueOf(diagdateTF.getText()));
+		selecteddiag.setDiagcomm(diagcommTA.getText());
+				
+		try{
+			selecteddiag.save();
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(this, "Failed to save the selected diagnosis", "Save", JOptionPane.WARNING_MESSAGE);
+			FinalApplication.LOGGER.debug("Error", e);
+		} finally {
+			refreshDiags();
+		}
+		}
+
+	}
+	
+	private void deleteDiag() {
+		FinalApplication.LOGGER.debug("Called delete function");
+		
+		if (selecteddiag!=null) {
+		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selecteddiag +"?", "Delete", JOptionPane.YES_NO_OPTION)) {
+			try {
+				selecteddiag.delete();
+			} catch (final SQLException e) {
+				FinalApplication.LOGGER.error("WTF just happened",e);
+				JOptionPane.showMessageDialog(this, "Failed to delete the selected diagnosis", "Delete", JOptionPane.WARNING_MESSAGE);;
+			} finally {
+				setSelectedDiagnosis(null);
+				refreshDiags();
+				}
+			}
+		}
+	}
+
 	//Creating the list of patients
 	private JComponent createListPane() {
 		patientsListModel = new DefaultListModel<>();
@@ -330,6 +437,20 @@ public class FinalApplication extends JFrame{
 		return toolBar;
 	}
 	
+	//Toolbar for the diagnosis
+	private JToolBar createToolBarDiag() {
+		final JToolBar toolBar = new JToolBar();
+		toolBar.add(refreshActionDiag);
+		toolBar.addSeparator();
+		toolBar.add(newActionDiag);
+		toolBar.addSeparator();
+		toolBar.add(saveActionDiag);
+		toolBar.addSeparator();
+		toolBar.add(deleteActionDiag);
+		
+		return toolBar;
+	}
+	
 	private void setSelectedPatient(Patient patient) {
 		
 		this.selected = patient;
@@ -365,6 +486,54 @@ public class FinalApplication extends JFrame{
 		
 		return new JScrollPane(appsList);
 	
+	}
+	
+	//Lists for the diagnosis
+	private DefaultListModel<Diagnosis> diagsListModel;
+	private JList<Diagnosis> diagsList;
+		
+	//Variable for the selected diagnosis
+	private Diagnosis selecteddiag;
+	
+	//Creating the list of the diagnosis
+	private JComponent createListDiag() {
+		diagsListModel = new DefaultListModel<>();
+		diagsList = new JList<>(diagsListModel);
+		diagsList.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if(!e.getValueIsAdjusting()) {
+					Diagnosis selecteddiag = diagsList.getSelectedValue();
+					setSelectedDiagnosis(selecteddiag);
+				}
+			}
+		});
+		
+		return new JScrollPane(diagsList);
+	
+	}
+	
+	//Function for when we select and appointment
+	private void setSelectedDiagnosis(Diagnosis diagnosis) {
+		
+		this.selecteddiag = diagnosis;
+		
+		if(diagnosis==null) {
+			diagidTF.setText("");
+			diagdateTF.setText("");
+			diagdridTF.setText("");
+			diagpatidTF.setText("");
+			diagcommTA.setText("");
+			
+		} else {
+			
+
+			diagidTF.setText(String.valueOf(diagnosis.getDiagid()));
+			diagdateTF.setText(String.valueOf(diagnosis.getDiagdate()));
+			diagdridTF.setText(String.valueOf(diagnosis.getDrid()));
+			diagpatidTF.setText(String.valueOf(diagnosis.getPatid()));
+			diagcommTA.setText(String.valueOf(diagnosis.getDiagcomm()));
+		}
 	}
 	
 
@@ -597,6 +766,102 @@ public class FinalApplication extends JFrame{
 		}
 	}
 	
+	private JTextField diagidTF; 
+	private JTextField diagdridTF;
+	private JTextField diagpatidTF;
+	private JTextField diagdateTF;
+	private JTextArea diagcommTA;
+	
+	private JPanel createDiagPanel() {
+		final JPanel diagpanel =  new JPanel(new GridBagLayout());
+
+		//Diagnosis ID
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("Diagnosis ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagidTF = new JTextField();
+		diagidTF.setEditable(false);
+		diagpanel.add(diagidTF, constraints);
+		
+		//DR ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("DOCTOR ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagdridTF = new JTextField();
+		diagpanel.add(diagdridTF, constraints);
+		
+
+		//Patient ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("PATIENT ID"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagpatidTF = new JTextField();
+		diagpanel.add(diagpatidTF, constraints);
+		
+		//Diagnosis Date
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("DATE"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 3;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagdateTF = new JTextField();
+		diagpanel.add(diagdateTF, constraints);
+
+		//Diagnosis Comments
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("COMMENTS4"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 4;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagcommTA = new JTextArea();
+		diagpanel.add(new JScrollPane(diagcommTA), constraints);
+								
+		return diagpanel;
+		
+	}
+	
 	private JPanel createAppPanel() {
 		final JPanel apppanel =  new JPanel(new GridBagLayout());
 
@@ -771,6 +1036,34 @@ public class FinalApplication extends JFrame{
 		
 	}
 	
+	//Function for refreshing the diagnosis list
+		private void refreshDiags() {
+			
+			FinalApplication.LOGGER.info("Refreshing Diagnosis");
+			
+			diagsListModel.removeAllElements();
+			final SwingWorker<Void, Diagnosis> worker = new SwingWorker<Void, Diagnosis>() {
+				@Override
+				protected Void doInBackground() throws Exception{
+					final List<Diagnosis> diagnosiss = DiagnosisHelper.getInstance().getDiagnosis();
+					for(final Diagnosis diagnosis: diagnosiss) {
+						publish(diagnosis);
+					}
+					return null;
+				}
+				
+				@Override
+				protected void process(final List<Diagnosis> chunks) {
+					for(final Diagnosis diagnosis: chunks) {
+						diagsListModel.addElement(diagnosis);
+					}
+				}
+			};
+			
+			worker.execute();
+			
+		}
+	
 	private JPanel createDiagSel() {
 		
 		final JPanel diagselpanel = new JPanel(new GridLayout(2,1));
@@ -804,13 +1097,13 @@ public class FinalApplication extends JFrame{
 			public void actionPerformed(ActionEvent ae) {
 				FinalApplication.LOGGER.info("Editing Appointments");
                 getContentPane().remove(diagselpanel);
-                JPanel apppanel = createAppPanel();
-                add(apppanel);
-                JComponent listapp = createListApp();
-                add(listapp, BorderLayout.WEST);
-                refreshApps();
-                JToolBar toolbarapp = createToolBarApp();
-                add(toolbarapp, BorderLayout.NORTH);
+                JPanel diagpanel = createDiagPanel();
+                add(diagpanel);
+                JComponent listdiag = createListDiag();
+                add(listdiag, BorderLayout.WEST);
+                refreshDiags();
+                JToolBar toolbardiag = createToolBarDiag();
+                add(toolbardiag, BorderLayout.NORTH);
                 getContentPane().invalidate();
                 getContentPane().validate();
 			}

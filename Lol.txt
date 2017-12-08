@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.util.Date;
 import java.util.List;
 
 import java.sql.Date;
@@ -367,6 +367,57 @@ public class FinalApplication extends JFrame{
 	
 	}
 	
+	//Lists for the diagnosis
+	private DefaultListModel<Appointment> diagsListModel;
+	private JList<Appointment> diagsList;
+		
+	//Variable for the selected diagnosis
+	private Diagnosis selecteddiag;
+	
+	//Creating the list of the diagnosis
+	private JComponent createListDiag() {
+		diagsListModel = new DefaultListModel<>();
+		diagsList = new JList<>(diagsListModel);
+		diagsList.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if(!e.getValueIsAdjusting()) {
+					Diagnosis selecteddiag = diagsList.getSelectedValue();
+					setSelectedDiagnosis(selecteddiag);
+				}
+			}
+		});
+		
+		return new JScrollPane(diagsList);
+	
+	}
+	
+	//Function for when we select and appointment
+	private void setSelectedDiagnosis(Diagnosis diagnosis) {
+		
+		this.selecteddiag = diagnosis;
+		
+		if(diagnosis==null) {
+			appidTextField.setText("");
+			apppatidTextField.setText("");
+			appdridTextField.setText("");
+			appridTextField.setText("");
+			appstartTextField.setText("");
+			appendTextField.setText("");
+			appcommentsTextArea.setText("");
+			
+		} else {
+			
+			appidTextField.setText(String.valueOf(appointment.getAppid()));
+			apppatidTextField.setText(String.valueOf(appointment.getPatid()));
+			appdridTextField.setText(String.valueOf(appointment.getDrid()));
+			appridTextField.setText(String.valueOf(appointment.getRoomid()));
+			appstartTextField.setText(String.valueOf(appointment.getAstart()));
+			appendTextField.setText(String.valueOf(appointment.getAend()));
+			appcommentsTextArea.setText(String.valueOf(appointment.getAppcom()));
+		}
+	}
+	
 
 	//Lists for the appointments show
 	private DefaultListModel<Appointment> appsListModelShow;
@@ -508,6 +559,8 @@ public class FinalApplication extends JFrame{
 		
 		this.selectedapp = appointment;
 		
+		FinalApplication.LOGGER.info("Appointment", appointment);
+		
 		if(appointment==null) {
 			appidTextField.setText("");
 			apppatidTextField.setText("");
@@ -530,29 +583,165 @@ public class FinalApplication extends JFrame{
 	}
 	
 	//Set the selected appointment to show
-	private void setSelectedAppointmentShow(Appointment appointment) {
+	private void setSelectedAppointmentShow(Appointment appointmentshow) {
 		
-		this.selectedapp = appointment;
+		this.selectedappshow = appointmentshow;
 		
-		if(appointment==null) {
-			appidTextField.setText("");
-			apppatidTextField.setText("");
-			appdridTextField.setText("");
-			appridTextField.setText("");
-			appstartTextField.setText("");
-			appendTextField.setText("");
-			appcommentsTextArea.setText("");
+		if(appointmentshow==null) {
+			drnameTF.setText("");
+			drlnameTF.setText("");
+			drspecialtyTF.setText("");
+			patnameTF.setText("");
+			patlnameTF.setText("");
+			appendTF.setText("");
+			appstartTF.setText("");
+			approomTF.setText("");
+			appdiagTA.setText("");
+			appcommTA.setText("");
 			
 		} else {
 			
-			appidTextField.setText(String.valueOf(appointment.getAppid()));
-			apppatidTextField.setText(String.valueOf(appointment.getPatid()));
-			appdridTextField.setText(String.valueOf(appointment.getDrid()));
-			appridTextField.setText(String.valueOf(appointment.getRoomid()));
-			appstartTextField.setText(String.valueOf(appointment.getAstart()));
-			appendTextField.setText(String.valueOf(appointment.getAend()));
-			appcommentsTextArea.setText(String.valueOf(appointment.getAppcom()));
+		
+			int drid  = appointmentshow.getDrid();
+			int patid = appointmentshow.getPatid();
+			
+			try {
+				String fname = appointmentshow.getdrname(drid);
+				drnameTF.setText(String.valueOf(fname));
+				
+				String lname = appointmentshow.getdrlname(drid);
+				drlnameTF.setText(String.valueOf(lname));
+				
+
+				String drspecialty = appointmentshow.getdrspecialty(drid);
+				drspecialtyTF.setText(String.valueOf(drspecialty));
+				
+				String patname = appointmentshow.getpatname(patid);
+				System.out.println(patname);
+				patnameTF.setText(String.valueOf(patname));
+				
+				String patlname = appointmentshow.getpatlname(patid);
+				System.out.println(patlname);
+				patlnameTF.setText(String.valueOf(patlname));
+				
+				String patphone = appointmentshow.getpatphone(patid);
+				System.out.println(patphone);
+				patphoneTF.setText(String.valueOf(patphone));
+
+				String diagcomm = appointmentshow.getdiagcomm(patid,drid);
+				appdiagTA.setText(String.valueOf(diagcomm));
+				
+				
+			} catch (SQLException e) {
+				FinalApplication.LOGGER.error("Error", e);
+			}
+			
+			
+
+			approomTF.setText(String.valueOf(appointmentshow.getRoomid()));
+			appstartTF.setText(String.valueOf(appointmentshow.getAstart()));
+			appendTF.setText(String.valueOf(appointmentshow.getAend()));
+			appcommTA.setText(String.valueOf(appointmentshow.getAppcom()));
+	
+		
+			
 		}
+	}
+	
+	private JTextField diagidTF; 
+	private JTextField diagdridTF;
+	private JTextField diagpatidTF;
+	private JTextField diagdateTF;
+	private JTextArea diagcommTA;
+	
+	private JPanel createDiagPanel() {
+		final JPanel diagpanel =  new JPanel(new GridBagLayout());
+
+		//Diagnosis ID
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("Diagnosis ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagidTF = new JTextField();
+		diagidTF.setEditable(false);
+		diagpanel.add(diagidTF, constraints);
+		
+		//DR ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("DOCTOR ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagdridTF = new JTextField();
+		diagpanel.add(diagdridTF, constraints);
+		
+
+		//Patient ID
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("PATIENT ID"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagpatidTF = new JTextField();
+		diagpanel.add(diagpatidTF, constraints);
+		
+		//Diagnosis Date
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("DATE"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 3;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagdateTF = new JTextField();
+		diagpanel.add(diagdateTF, constraints);
+
+		//Diagnosis Comments
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagpanel.add(new JLabel("COMMENTS4"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 4;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		diagcommTA = new JTextArea();
+		diagpanel.add(new JScrollPane(diagcommTA), constraints);
+								
+		return diagpanel;
+		
 	}
 	
 	private JPanel createAppPanel() {
@@ -714,12 +903,68 @@ public class FinalApplication extends JFrame{
 		
 		diagbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				FinalApplication.LOGGER.info("This is boring af");
+				FinalApplication.LOGGER.info("Going to Diagnosis menu");
+                getContentPane().remove(drselpanel);
+                JPanel diagpanel = createDiagSel();
+                add(diagpanel);
+                getContentPane().invalidate();
+                getContentPane().validate();
+				
 			}
 		});
 		
 
 		return drselpanel;
+		
+	}
+	
+	private JPanel createDiagSel() {
+		
+		final JPanel diagselpanel = new JPanel(new GridLayout(2,1));
+		
+		//Buttons for the panel
+		final JButton seediag = new JButton("See Diagnosis");
+		final JButton editdiag = new JButton("Edit Diagnosis");
+		
+		//Adding the buttons to the panel
+		diagselpanel.add(seediag);
+		diagselpanel.add(editdiag);
+		
+		seediag.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+            	FinalApplication.LOGGER.info("Seeing Appointments");
+            	getContentPane().remove(diagselpanel);
+            	JComponent listappshow = createListAppShow();
+            	add(listappshow, BorderLayout.WEST);
+            	JPanel appui = appointmentUI();
+            	add(appui, BorderLayout.CENTER);
+            	
+            	//Adding appointments to the panel
+            	refreshAppsShow();
+                getContentPane().invalidate();
+                getContentPane().validate();
+            	
+            }
+        });
+		
+		editdiag.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				FinalApplication.LOGGER.info("Editing Appointments");
+                getContentPane().remove(diagselpanel);
+                JPanel diagpanel = createDiagPanel();
+                add(diagpanel);
+                JComponent listdiag = createListDiag();
+                //add(listapp, BorderLayout.WEST);
+                //refreshDiags();
+                //JToolBar toolbardiag = createToolBarDiag();
+                //add(toolbardiag, BorderLayout.NORTH);
+                getContentPane().invalidate();
+                getContentPane().validate();
+			}
+		});
+		
+
+		return diagselpanel;
 		
 	}
 	
