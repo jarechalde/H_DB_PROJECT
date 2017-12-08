@@ -23,7 +23,7 @@ public class RoomsHelperTest {
 		DBHelper.getInstance().init();
 		
 		try (Connection connection = DBHelper.getConnection(); Statement stmt = connection.createStatement()) {
-			stmt.execute("TRUNCATE TABLE ROOMS");		
+			//stmt.execute("TRUNCATE TABLE ROOMS");		
 		}	
 	}
 	
@@ -34,9 +34,9 @@ public class RoomsHelperTest {
 		Assert.assertTrue(rooms.isEmpty());
 		
 		try(Connection connection = DBHelper.getConnection(); Statement stmt = connection.createStatement()){
-			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (123456,12,'PENE')");
-			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (123156,12,'PENE')");
-			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (124446,12,'PENE')");
+			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (123456,12,'OPERATION')");
+			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (123156,12,'OPERATION')");
+			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (124446,12,'OPERATION')");
 			
 			rooms = RoomsHelper.getInstance().getRooms();
 			Assert.assertNotNull(rooms);
@@ -46,13 +46,13 @@ public class RoomsHelperTest {
 			Assert.assertNotNull(room);
 			Assert.assertEquals(123156, room.getrid());
 			Assert.assertEquals(12, room.getrcap());
-			Assert.assertEquals("PENE", room.getrtype());
+			Assert.assertEquals("OPERATION", room.getrtype());
 			
 			room = rooms.get(2);
 			Assert.assertNotNull(room);
 			Assert.assertEquals(124446, room.getrid());
 			Assert.assertEquals(12, room.getrcap());
-			Assert.assertEquals("PENE", room.getrtype());
+			Assert.assertEquals("OPERATION", room.getrtype());
 			
 			
 		}

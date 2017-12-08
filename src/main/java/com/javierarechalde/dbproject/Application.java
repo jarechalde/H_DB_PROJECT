@@ -70,12 +70,14 @@ public class Application extends JFrame{
 	private Action newAction;
 	private Action saveAction;
 	private Action deleteAction;
+	private Action homeAction;
 	
 	//Actions for the appointments toolbar
 	private Action refreshActionApp;
 	private Action newActionApp;
 	private Action saveActionApp;
 	private Action deleteActionApp;
+	private Action homeActionApp;
 	
 	//List for the patients
 	private DefaultListModel<Patient> patientsListModel;
@@ -178,6 +180,19 @@ public class Application extends JFrame{
 	
 	//Actions for the appointments toolbar
 	private void initActionsApp() {
+
+		homeActionApp = new AbstractAction("HomeApp", load("Home")) {
+			private static final long serialVersionUID = -3876237444679320139L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				Application.LOGGER.debug("Main menu");
+                getContentPane().removeAll();
+                initUI();
+                getContentPane().repaint();
+				
+			}
+		};
 		
 		refreshActionApp = new AbstractAction("RefreshApp", load("Refresh")) {
 			private static final long serialVersionUID = -3876237444679320139L;
@@ -221,6 +236,22 @@ public class Application extends JFrame{
 	}
 	
 	private void initActions() {
+		
+
+			homeAction = new AbstractAction("Home", load("Home")) {
+				private static final long serialVersionUID = -3876237444679320139L;
+	
+				@Override
+				public void actionPerformed(final ActionEvent e) {
+					Application.LOGGER.debug("Main menu");
+	                getContentPane().removeAll();
+	                initUI();
+	                getContentPane().repaint();
+
+					
+				}
+			};
+		
 			
 			refreshAction = new AbstractAction("Refresh", load("Refresh")) {
 				private static final long serialVersionUID = -3876237444679320139L;
@@ -268,9 +299,23 @@ public class Application extends JFrame{
 	private Action newActionDiag;
 	private Action saveActionDiag;
 	private Action deleteActionDiag;
+	private Action homeActionDiag;
 	
 	//Actions for the diagnosis toolbar
 	private void initActionsDiag() {
+	
+		homeActionDiag = new AbstractAction("HomeDiag", load("Home")) {
+			private static final long serialVersionUID = -3876237444679320139L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				Application.LOGGER.debug("Main menu");
+                getContentPane().removeAll();
+                initUI();
+                getContentPane().repaint();
+				
+			}
+		};
 		
 		refreshActionDiag = new AbstractAction("RefreshDiag", load("Refresh")) {
 			private static final long serialVersionUID = -3876237444679320139L;
@@ -515,6 +560,9 @@ public class Application extends JFrame{
 	
 	private JToolBar createToolBar() {
 		final JToolBar toolBar = new JToolBar();
+
+		toolBar.add(homeAction);
+		toolBar.addSeparator();
 		toolBar.add(refreshAction);
 		toolBar.addSeparator();
 		toolBar.add(newAction);
@@ -528,6 +576,9 @@ public class Application extends JFrame{
 		
 	private JToolBar createToolBarApp() {
 		final JToolBar toolBar = new JToolBar();
+
+		toolBar.add(homeActionApp);
+		toolBar.addSeparator();
 		toolBar.add(refreshActionApp);
 		toolBar.addSeparator();
 		toolBar.add(newActionApp);
@@ -542,6 +593,9 @@ public class Application extends JFrame{
 	//Toolbar for the diagnosis
 	private JToolBar createToolBarDiag() {
 		final JToolBar toolBar = new JToolBar();
+		
+		toolBar.add(homeActionDiag);
+		toolBar.addSeparator();
 		toolBar.add(refreshActionDiag);
 		toolBar.addSeparator();
 		toolBar.add(newActionDiag);
@@ -558,9 +612,23 @@ public class Application extends JFrame{
 	private Action newActionFac;
 	private Action saveActionFac;
 	private Action deleteActionFac;
+	private Action homeActionFac;
 	
 	//Actions for the facilities toolbar
 		private void initActionsFac() {
+			
+			homeActionFac = new AbstractAction("HomeFac", load("Home")) {
+				private static final long serialVersionUID = 9008483889368221463L;
+
+				@Override
+				public void actionPerformed(final ActionEvent e) {
+					Application.LOGGER.debug("Main menu");
+	                getContentPane().removeAll();
+	                initUI();
+	                getContentPane().repaint();
+					
+				}
+			};
 			
 			refreshActionFac = new AbstractAction("RefreshFac", load("Refresh")) {
 				private static final long serialVersionUID = -3876237444679320139L;
@@ -662,6 +730,9 @@ public class Application extends JFrame{
 	//Toolbar for the facilities
 	private JToolBar createToolBarFac() {
 		final JToolBar toolBar = new JToolBar();
+
+		toolBar.add(homeActionFac);
+		toolBar.addSeparator();
 		toolBar.add(refreshActionFac);
 		toolBar.addSeparator();
 		toolBar.add(newActionFac);
@@ -678,10 +749,14 @@ public class Application extends JFrame{
 	private Action newActionStaff;
 	private Action saveActionStaff;
 	private Action deleteActionStaff;
+	private Action homeActionStaff;
 	
 	//Toolbar for the staff
 	private JToolBar createToolBarStaff() {
 		final JToolBar toolBar = new JToolBar();
+
+		toolBar.add(homeActionStaff);
+		toolBar.addSeparator();
 		toolBar.add(refreshActionStaff);
 		toolBar.addSeparator();
 		toolBar.add(newActionStaff);
@@ -693,10 +768,23 @@ public class Application extends JFrame{
 		return toolBar;
 	}
 	
-	//Actions for the facilities toolbar
+	//Actions for the staff toolbar
 	private void initActionsStaff() {
 		
-		refreshActionStaff = new AbstractAction("RefreshStadff", load("Refresh")) {
+		homeActionStaff = new AbstractAction("HomeStaff", load("Home")) {
+			private static final long serialVersionUID = -3876237444679320139L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				Application.LOGGER.debug("Main menu");
+                getContentPane().removeAll();
+                initUI();
+                getContentPane().repaint();
+				
+			}
+		};
+		
+		refreshActionStaff = new AbstractAction("RefreshStaff", load("Refresh")) {
 			private static final long serialVersionUID = -3876237444679320139L;
 
 			@Override
@@ -2198,7 +2286,7 @@ public class Application extends JFrame{
 		constraints = new GridBagConstraints();
 		constraints.gridy = 6;
 		constraints.gridx = 1;
-		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.anchor = GridBagConstraints.WEST;
 		constraints.insets = new Insets(2,2,2,2);
 		facui.add(new JLabel("Description"), constraints);
 	
@@ -2207,6 +2295,7 @@ public class Application extends JFrame{
 		constraints.gridx = 1;
 		constraints.weightx = 1;
 		constraints.weighty = 1;
+		constraints.gridwidth = 2;
 		constraints.anchor = GridBagConstraints.CENTER;
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;

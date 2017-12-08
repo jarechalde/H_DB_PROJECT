@@ -23,7 +23,7 @@ public class RoomsTest {
 		DBHelper.getInstance().init();
 		
 		try(Connection connection = DBHelper.getConnection(); Statement stmt = connection.createStatement()){
-			stmt.execute("TRUNCATE TABLE ROOMS");
+			//stmt.execute("TRUNCATE TABLE ROOMS");
 		}
 	}
 	
@@ -41,7 +41,7 @@ public class RoomsTest {
 			stmt.execute("INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES (124446,12,'PENE')");
 			
 			List<Room> rooms = RoomsHelper.getInstance().getRooms();
-			Assert.assertEquals(3, rooms.size());
+			Assert.assertEquals(9, rooms.size());
 		
 			final Room room = rooms.get(1);
 			//Checking if before and after the save, the id == -1  and the id
@@ -64,7 +64,7 @@ public class RoomsTest {
 		final Room r = new Room();
 		r.setrid(125468);
 		r.setrcap(10);
-		r.setrtype("MESSI");
+		r.setrtype("OFFICE");
 		
 		//Checking if before and after the save, the id == -1  and the id
 		//Assert.assertEquals(125468, r.getrid());
@@ -92,7 +92,7 @@ public class RoomsTest {
 		
 		//Checking if it was updated
 		Assert.assertEquals(233454, r.getrid());
-		Assert.assertEquals("MESSI", r.getrtype());
+		Assert.assertEquals("OFFICE", r.getrtype());
 		Assert.assertEquals(10, r.getrcap());
 		
 		final List<Room> rooms = RoomsHelper.getInstance().getRooms();
@@ -100,7 +100,7 @@ public class RoomsTest {
 		
 		final Room room = rooms.get(0);
 		Assert.assertEquals(125468, room.getrid());
-		Assert.assertEquals("MESSI", room.getrtype());
+		Assert.assertEquals("OFFICE", room.getrtype());
 		Assert.assertEquals(10, room.getrcap());
 		
 	

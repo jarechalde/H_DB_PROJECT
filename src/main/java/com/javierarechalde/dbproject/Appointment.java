@@ -272,41 +272,15 @@ public class Appointment {
 		if (appid == -1) {
 			formatted.append("[No id]");
 		} else {
-			formatted.append("[").append(appid).append("] ");
+			formatted.append("APPID: [").append(appid).append("] ");
 		}
 		
 		if (patid == 0) {
 			formatted.append("No Patient ID");
 		} else {
-			formatted.append(patid);
-		}
-		
-		if (drid == 0) {
-			formatted.append("No Doctor ID");
-		} else {
-			formatted.append(" "+drid);
-		}
-		
-		if (roomid == 0) {
-			formatted.append("No Room ID");
-		} else {
-			formatted.append(" ").append(roomid).append(" ");
-		}
-		
-		
-		if (astart == null) {
-			formatted.append("No Start Date");
-		} else {
-			formatted.append(astart);
-		}
-		
-		if (aend == null) {
-			formatted.append("No End Date");
-		} else {
-			formatted.append(aend);
-		}
-		
-		
+			formatted.append("PATID: ").append(patid);
+		}		
+				
 		return formatted.toString();
 	}
 	

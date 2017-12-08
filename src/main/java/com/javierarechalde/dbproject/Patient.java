@@ -73,19 +73,6 @@ public class Patient {
 			formatted.append(" "+lname);
 		}
 		
-		if (pnumber == 0) {
-			formatted.append("No Phone Number");
-		} else {
-			formatted.append(" ").append(pnumber).append(" ");
-		}
-		
-		
-		if (inscard == 0) {
-			formatted.append("No insurance card");
-		} else {
-			formatted.append(inscard);
-		}
-		
 		return formatted.toString();
 	}
 	
