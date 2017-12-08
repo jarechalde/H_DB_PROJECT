@@ -91,26 +91,7 @@ public class Facilities {
 			formatted.append("No Building");
 		} else {
 			formatted.append(" "+facbuild);
-		}
-		
-		if (facplant == 0) {
-			formatted.append("No Plant");
-		} else {
-			formatted.append(" ").append(facplant).append(" ");
-		}
-		
-		
-		if (factype == null) {
-			formatted.append("No Fac.Type");
-		} else {
-			formatted.append(factype);
-		}
-		
-		if (facdesc == null) {
-			formatted.append("No Description");
-		} else {
-			formatted.append(facdesc);
-		}
+		}					
 		
 		return formatted.toString();
 	}
