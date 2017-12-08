@@ -49,7 +49,6 @@ public class Application extends JFrame{
 	private JPanel controlpanel = new JPanel(new GridLayout(2,2));
 	
 	//Variables for the patients layout
-	private JPanel patpanel = new JPanel(new GridBagLayout());
 	private JTextField patidTextField;
 	private JTextField patfnTextField;
 	private JTextField patlnTextField;
@@ -2332,20 +2331,10 @@ public class Application extends JFrame{
 		
 }
 	
-	private void initUI() {
-		//Buttons for the main frame
-		final JButton DrButton = new JButton("DOCTORS");
-		final JButton PatButton = new JButton("PATIENTS");
-		final JButton FacButton = new JButton("FACILITIES");
-		final JButton StaffButton = new JButton("STAFF");
+	private JPanel patientui() {
 
-		//Adding the buttons to the main frame
-		controlpanel.add(DrButton);
-		controlpanel.add(PatButton);
-		controlpanel.add(FacButton);
-		controlpanel.add(StaffButton);
-		
 		//Creating the component for the patients
+		final JPanel patpanel =  new JPanel(new GridBagLayout());
 		
 		//Patient ID
 		GridBagConstraints constraints = new GridBagConstraints();
@@ -2411,7 +2400,7 @@ public class Application extends JFrame{
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		patpnTextField = new JTextField();
-		patpanel.add(new JScrollPane(patpnTextField), constraints);
+		patpanel.add(patpnTextField, constraints);
 				
 		//Patient Insurance card
 		constraints = new GridBagConstraints();
@@ -2428,11 +2417,24 @@ public class Application extends JFrame{
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		paticTextField = new JTextField();
-		patpanel.add(new JScrollPane(paticTextField), constraints);
+		patpanel.add(paticTextField, constraints);
 		
-		//Adding the panel to edit and the list to the frame
-		//add(patpanel, BorderLayout.CENTER);
-		//add(listpanel, BorderLayout.WEST);
+		return patpanel;
+	}
+	
+	private void initUI() {
+		//Buttons for the main frame
+		final JButton DrButton = new JButton("DOCTORS");
+		final JButton PatButton = new JButton("PATIENTS");
+		final JButton FacButton = new JButton("FACILITIES");
+		final JButton StaffButton = new JButton("STAFF");
+
+		//Adding the buttons to the main frame
+		controlpanel.add(DrButton);
+		controlpanel.add(PatButton);
+		controlpanel.add(FacButton);
+		controlpanel.add(StaffButton);
+		
 	
 		DrButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
@@ -2447,6 +2449,7 @@ public class Application extends JFrame{
             public void actionPerformed(ActionEvent ae) {
             Application.LOGGER.info("Opening Patients Panel");
             getContentPane().remove(controlpanel);
+            JPanel patpanel  = patientui();
             add(patpanel);
             add(createListPane(), BorderLayout.WEST);
             refreshPatients();
