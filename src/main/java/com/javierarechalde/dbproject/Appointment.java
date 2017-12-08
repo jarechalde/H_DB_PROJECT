@@ -173,9 +173,11 @@ public class Appointment {
 		return patphone;
 	}
 	
-	private String diagcomm = null;
+	
 	
 	public String getdiagcomm(int patid, int drid) throws SQLException{
+		
+		String diagcomm = null;
 		
 		try(Connection connection = DBHelper.getConnection();){
 			final String sql = "SELECT * FROM DIAGNOSIS WHERE PATID = ? AND DRID = ?";
@@ -304,11 +306,6 @@ public class Appointment {
 			formatted.append(aend);
 		}
 		
-		if (appcom == null) {
-			formatted.append("No Comments");
-		} else {
-			formatted.append(appcom);
-		}
 		
 		return formatted.toString();
 	}

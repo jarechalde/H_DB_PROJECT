@@ -993,7 +993,7 @@ public class FinalApplication extends JFrame{
 			} else {
 				
 			
-				final int drid  = diagnosishow.getDiagid();
+				final int drid  = diagnosishow.getDrid();
 				final int patid = diagnosishow.getPatid();
 				
 				try {
@@ -1224,7 +1224,6 @@ public class FinalApplication extends JFrame{
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		diagidTF = new JTextField();
-		diagidTF.setEditable(false);
 		diagpanel.add(diagidTF, constraints);
 		
 		//DR ID
@@ -1431,25 +1430,19 @@ public class FinalApplication extends JFrame{
 		final JPanel drselpanel = new JPanel(new GridLayout(2,1));
 		
 		//Buttons for the panel
-		final JButton appbutton = new JButton("Appointments");
-		final JButton diagbutton = new JButton("Diagnosis");
+		final JButton appbutton = new JButton("APPOINTMENTS");
+		final JButton diagbutton = new JButton("DIAGNOSIS");
 		
 		drselpanel.add(appbutton);
 		drselpanel.add(diagbutton);
 		
 		appbutton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-            	FinalApplication.LOGGER.info("Creating appointment");
-            	//createAppSel();
+            	FinalApplication.LOGGER.info("Appointments menu");
                 getContentPane().remove(drselpanel);
                 JPanel apppanel = createAppSel();
                 add(apppanel);
-                //JComponent listapp = createListApp();
-                //add(listapp, BorderLayout.WEST);
-                //refreshApps();
-                //Have to create another toolbar for the appointments, or at least modify the existing one
-                //JToolBar toolbarapp = createToolBarApp();
-                //add(toolbarapp, BorderLayout.NORTH);
+                //refreshDiagsShow();
                 getContentPane().invalidate();
                 getContentPane().validate();
             	
@@ -1458,7 +1451,7 @@ public class FinalApplication extends JFrame{
 		
 		diagbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				FinalApplication.LOGGER.info("Going to Diagnosis menu");
+				FinalApplication.LOGGER.info("Diagnosis menu");
                 getContentPane().remove(drselpanel);
                 JPanel diagpanel = createDiagSel();
                 add(diagpanel);
@@ -1532,8 +1525,8 @@ public class FinalApplication extends JFrame{
 		final JPanel diagselpanel = new JPanel(new GridLayout(2,1));
 		
 		//Buttons for the panel
-		final JButton seediag = new JButton("See Diagnosis");
-		final JButton editdiag = new JButton("Edit Diagnosis");
+		final JButton seediag = new JButton("SEE DIAGNOSIS");
+		final JButton editdiag = new JButton("EDIT DIAGNOSIS");
 		
 		//Adding the buttons to the panel
 		diagselpanel.add(seediag);
@@ -1583,8 +1576,8 @@ public class FinalApplication extends JFrame{
 		final JPanel appselpanel = new JPanel(new GridLayout(2,1));
 		
 		//Buttons for the panel
-		final JButton seeapp = new JButton("See Appointments");
-		final JButton editapp = new JButton("Edit Appointments");
+		final JButton seeapp = new JButton("SEE APPOINTMENTS");
+		final JButton editapp = new JButton("EDIT APPOINTMENTS");
 		
 		//Adding the buttons to the panel
 		appselpanel.add(seeapp);
@@ -1598,8 +1591,6 @@ public class FinalApplication extends JFrame{
             	add(listappshow, BorderLayout.WEST);
             	JPanel appui = appointmentUI();
             	add(appui, BorderLayout.CENTER);
-            	
-            	//Adding appointments to the panel
             	refreshAppsShow();
                 getContentPane().invalidate();
                 getContentPane().validate();

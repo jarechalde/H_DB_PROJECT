@@ -69,7 +69,7 @@ public class Diagnosis {
 	public String toString() {
 		final StringBuilder formatted = new StringBuilder();
 		
-		if (patid == -1) {
+		if (diagid == -1) {
 			formatted.append("[No id]");
 		} else {
 			formatted.append("[").append(diagid).append("] ");
@@ -91,13 +91,6 @@ public class Diagnosis {
 			formatted.append("No Date");
 		} else {
 			formatted.append(" ").append(diagdate).append(" ");
-		}
-		
-		
-		if (diagcomm == null) {
-			formatted.append("No Comments");
-		} else {
-			formatted.append(diagcomm);
 		}
 		
 		return formatted.toString();
@@ -235,7 +228,7 @@ public class Diagnosis {
 		Diagnosis.LOGGER.debug("Looking for key in the table...");
 		for(final Diagnosis diagnosis : diagnosiss) {
 			Diagnosis.LOGGER.debug(".");
-			if (patid == diagnosis.getPatid()) {
+			if (diagid == diagnosis.getDiagid()) {
 				Diagnosis.LOGGER.debug("Key in the table");
 				inlist = 1;
 			}
