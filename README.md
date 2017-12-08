@@ -4,9 +4,7 @@ This project's purpose is to create a Hospital database application in which you
 
 ## Getting Started
 
-This database was developed under Eclipse, and its based on a Maven project. The reason to choose Maven was its simplicity when it comes to add dependencies to the project and its high configurability.
-
-After creating all the project resources, we will compile it on a simple .jar file, which the user will just need to click it. After clicking on the file, a GUI will open, and the user will be able to operate the database by clicking on the different buttons on the 
+This database was developed under Eclipse, and its based on a Maven project. The reason to choose Maven was its simplicity when it comes to add dependencies to the project and its high configurability when it comes to building java projects.
 
 ### Prerequisites
 
@@ -14,7 +12,20 @@ To run this application, you will need to have java 1.8 installed into your mach
 
 ## Application Architecture
 
-This application was built using Mave, this will help us to compile our project once everything is ready, and it will also help us to load in a simple way all the dependencies that we will use under this project's scome.
+This application was built using Maven, this will help us to compile our project once everything is ready, and it will also help us to load in a simple way all the dependencies that we will use under this project's scope.
+
+### Classes
+
+
+### Debugging
+
+A really important part of a project is debugging. For this purpose we used slf4j debugger, which help us to understand better whats going on when something is not working in our code. The debugger will save all its output to a log file, which will be helpful in the future have some records of what has been going on in our application before a failure occurs.
+
+### Testing the application
+
+For testing the application, we created different tests, in which we execute different commands on our classes, and set the expected return of this commands. If the command returns same outcome as expected the test will be successful, otherwise, the test will fail. Maven builder will run all this tests before creating the final application and if any of these fail, the application will not be created.
+
+### Building the application
 
 Once we are ready to build our project, we will just run this simple command on the Maven Build context.
 
@@ -22,9 +33,9 @@ Once we are ready to build our project, we will just run this simple command on 
 clean install
 ```
 
-And the Maven build tool will take care of everyth
+And the Maven build tool will take care of everything for us, like running the different tests that we set for the project and it will create a simple java file that can be run.
 
-## Operating the database
+## Operating the application
 
 ### Main menu
 
