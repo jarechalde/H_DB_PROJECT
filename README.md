@@ -14,8 +14,28 @@ To run this application, you will need to have java 1.8 installed into your mach
 
 This application was built using Maven, this will help us to compile our project once everything is ready, and it will also help us to load in a simple way all the dependencies that we will use under this project's scope.
 
+### Database
+
+For this project I used a H2 database, a SQL based database, which uses the JDBC drivers to connect to it. This choice was made because it is very fast, is open source and its also compatible with the JDBC API.
+
+#### Database Migration
+
+For creating the database I used the FlyWay database migration tool, which helps migrating to a database whenever is created. For this purpose I created two different files under the resources folder in the java project. One of this files is in charge of creating the database tables, and the other one is in charge of populating this database's tables. 
+
+Whenever a user opens the database, when oppening the application in example, FlyWay will take care of checking that the database is up to date and introduce any changes if necessary.
+
+This tool is really useful, because in case we need to add values to our tables in the future, or modify something, we just need to create another SQL file under the resources, anf FlyWay will take care of executing this migration and updating the values in the database.
+
+
 ### Classes
 
+The application is structured this way:
+
+There is a Main function that creates the UI for the user. This Main function calls another class that is in charge of creating all the UI elements. This other class will rely on another classes that will help this class display the data on the screen or add, remove or update data on the database. 
+
+In example whenever we want to add a new patient to the patients table, we will see all the patients list on the left of the UI, this list is given by the class PatientsHelper, which is in charge of getting a list of all the patients in the hospital database. This class also relies in another function that is de Database Helper, which will help any class whenever it needs it to connect to the database. 
+
+For setting any fields values, we will also need to call a function like Patients, which, with a set of getters and setters, will help us to retrieve data from the database's tables.
 
 ### Debugging
 
