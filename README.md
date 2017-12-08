@@ -31,7 +31,16 @@ For creating appointments we will need to use the doctor's ID, patient's ID, the
 #### Seeing Appointments
 
 In case we want to see any appointment details, the user can click on any appointment shown in the appointments list. After clicking on each appointment, the data on the form in the right will be updated, showing the doctor's name, last name and specialty, patient's name, 
-last name and phone number
+last name and phone number, room, start appointment date, end appointment date, appointment comments, and all the patient diagnosis.
+
+### Diagnosing Patients
+
+
+
+### Seeing Diagnosis
+
+In case we want to see any diagnosis details, the user can click on any diagnosis shown in the diagnosis list. After clicking on any diagnosis, the data on the form in the right 
+
 ### 2. Patients Menu
 
 In this menu, we can Add, Update, or Remove patients from the hospital database.
