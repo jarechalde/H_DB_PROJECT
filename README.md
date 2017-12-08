@@ -39,4 +39,4 @@ In this menu, we can Add, Update, or Remove Staff from the hospital database.
 
 ## Authors
 
-* **Javier Arechalde** - *Initial work* - [Jarechalde](https://github.com/jarechalde)
+* **Javier Arechalde** - *Initial work* - [Jarechalde] (https://github.com/jarechalde)
