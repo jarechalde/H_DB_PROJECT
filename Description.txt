@@ -1,9 +1,0 @@
-For this project we will use Maven project, this way, we can keep the libraries and 
-
-We will use Flyway, this way, whenever an user opens the database for the first time, a migration will occur, and the database will be created and updated.
-
-For the interface we used Java Swing.
-
-we compiled the project on one simple jar file that whenever is exectuted, it will create the database, and get the different jars that it may need to run.
-
-The compiled Jar will be in only one file, and

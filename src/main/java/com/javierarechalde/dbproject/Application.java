@@ -1463,7 +1463,7 @@ public class Application extends JFrame{
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		appstartTextField = new JTextField();
-		apppanel.add(new JScrollPane(appstartTextField), constraints);
+		apppanel.add(appstartTextField, constraints);
 				
 		
 		//End date of the appointment
@@ -1480,7 +1480,7 @@ public class Application extends JFrame{
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		appendTextField = new JTextField();
-		apppanel.add(new JScrollPane(appendTextField), constraints);
+		apppanel.add(appendTextField, constraints);
 		
 		
 		
@@ -1618,11 +1618,32 @@ public class Application extends JFrame{
             public void actionPerformed(ActionEvent ae) {
             	Application.LOGGER.info("Seeing Diagnosis");
             	getContentPane().remove(diagselpanel);
+            	
+           
+            	
             	JComponent listdiagsshow = createListDiagShow();
             	add(listdiagsshow, BorderLayout.WEST);
             	
             	JPanel diagui = diagnosisUI();
             	add(diagui, BorderLayout.CENTER);
+            	
+             	final JButton homediag = new JButton("MAIN MENU");
+            	homediag.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+
+						Application.LOGGER.debug("Main menu");
+		                getContentPane().removeAll();
+		                initUI();
+		                getContentPane().repaint();
+						
+					}
+            		
+            	});
+            	
+            	add(homediag, BorderLayout.PAGE_START);
+            	
             	
             	//Adding diagnosis to the panel
             	refreshDiagsShow();
@@ -1675,6 +1696,24 @@ public class Application extends JFrame{
             	JPanel appui = appointmentUI();
             	add(appui, BorderLayout.CENTER);
             	refreshAppsShow();
+            	
+             	final JButton homeapp = new JButton("MAIN MENU");
+            	homeapp.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+
+						Application.LOGGER.debug("Main menu");
+		                getContentPane().removeAll();
+		                initUI();
+		                getContentPane().repaint();
+						
+					}
+            		
+            	});
+            	
+            	add(homeapp, BorderLayout.PAGE_START);
+            	
                 getContentPane().invalidate();
                 getContentPane().validate();
             	
@@ -2086,7 +2125,7 @@ public class Application extends JFrame{
 		GridBagConstraints constraints = new GridBagConstraints();
 		constraints.gridx = 1;
 		constraints.gridy = 1;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		staffui.add(new JLabel("Staff ID"), constraints);
 		
@@ -2094,6 +2133,7 @@ public class Application extends JFrame{
 		constraints.weightx = 1;
 		constraints.gridy = 1;
 		constraints.gridx = 2;
+		constraints.weighty = 1;
 		constraints.anchor = GridBagConstraints.WEST;
 		constraints.insets = new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
@@ -2104,14 +2144,15 @@ public class Application extends JFrame{
 		constraints = new GridBagConstraints();
 		constraints.gridy = 2;
 		constraints.gridx = 1;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
-		staffui.add(new JLabel("Facility Name"), constraints);
+		staffui.add(new JLabel("First Name"), constraints);
 	
 		constraints = new GridBagConstraints();
 		constraints.gridy = 2;
 		constraints.gridx = 2;
 		constraints.weightx = 1;
+		constraints.weighty = 1;
 		constraints.anchor = GridBagConstraints.WEST;
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
@@ -2122,7 +2163,7 @@ public class Application extends JFrame{
 		constraints = new GridBagConstraints();
 		constraints.gridx = 1;
 		constraints.gridy = 3;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		staffui.add(new JLabel("Last name"), constraints);
 		
@@ -2130,6 +2171,7 @@ public class Application extends JFrame{
 		constraints.weightx = 1;
 		constraints.gridy = 3;
 		constraints.gridx = 2;
+		constraints.weighty = 1;
 		constraints.anchor = GridBagConstraints.WEST;
 		constraints.insets = new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
@@ -2140,7 +2182,7 @@ public class Application extends JFrame{
 		constraints = new GridBagConstraints();
 		constraints.gridy = 4;
 		constraints.gridx = 1;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		staffui.add(new JLabel("Staff Dept."), constraints);
 	
@@ -2148,6 +2190,7 @@ public class Application extends JFrame{
 		constraints.gridy = 4;
 		constraints.gridx = 2;
 		constraints.weightx = 1;
+		constraints.weighty = 1;
 		constraints.anchor = GridBagConstraints.WEST;
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
@@ -2158,7 +2201,7 @@ public class Application extends JFrame{
 		constraints = new GridBagConstraints();
 		constraints.gridy = 5;
 		constraints.gridx = 1;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		staffui.add(new JLabel("DR ID"), constraints);
 	
@@ -2166,6 +2209,7 @@ public class Application extends JFrame{
 		constraints.gridy = 5;
 		constraints.gridx = 2;
 		constraints.weightx = 1;
+		constraints.weighty = 1;
 		constraints.anchor = GridBagConstraints.WEST;
 		constraints.insets =  new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
@@ -2207,6 +2251,8 @@ public class Application extends JFrame{
 		constraints.insets = new Insets(2,2,2,2);
 		constraints.fill = GridBagConstraints.BOTH;
 		facidTF = new JTextField();
+		//Setting the facilities ID text field as non editable, because the table autoincrements
+		facidTF.setEditable(false);
 		facui.add(facidTF, constraints);
 				
 		//Facilities name
@@ -2338,7 +2384,7 @@ public class Application extends JFrame{
 		
 		//Patient ID
 		GridBagConstraints constraints = new GridBagConstraints();
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		patpanel.add(new JLabel("Patient ID"), constraints);
 		
@@ -2353,7 +2399,7 @@ public class Application extends JFrame{
 		//Patient First Name
 		constraints = new GridBagConstraints();
 		constraints.gridy = 1;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		patpanel.add(new JLabel("First Name"), constraints);
 
@@ -2370,7 +2416,7 @@ public class Application extends JFrame{
 		//Patient Last Name
 		constraints = new GridBagConstraints();
 		constraints.gridy = 2;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		patpanel.add(new JLabel("Last Name"), constraints);
 		
@@ -2388,7 +2434,7 @@ public class Application extends JFrame{
 		//Patient Phone Number
 		constraints = new GridBagConstraints();
 		constraints.gridy = 3;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		patpanel.add(new JLabel("Phone Number"), constraints);
 		
@@ -2405,7 +2451,7 @@ public class Application extends JFrame{
 		//Patient Insurance card
 		constraints = new GridBagConstraints();
 		constraints.gridy = 4;
-		constraints.anchor = GridBagConstraints.WEST;
+		constraints.anchor = GridBagConstraints.NORTHWEST;
 		constraints.insets = new Insets(2,2,2,2);
 		patpanel.add(new JLabel("Insurance Card"), constraints);
 		
