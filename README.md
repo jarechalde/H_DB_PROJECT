@@ -12,6 +12,18 @@ After creating all the project resources, we will compile it on a simple .jar fi
 
 To run this application, you will need to have java 1.8 installed into your machine.
 
+## Application Architecture
+
+This application was built using Mave, this will help us to compile our project once everything is ready, and it will also help us to load in a simple way all the dependencies that we will use under this project's scome.
+
+Once we are ready to build our project, we will just run this simple command on the Maven Build context.
+
+```
+clean install
+```
+
+And the Maven build tool will take care of everyth
+
 ## Operating the database
 
 ### Main menu
@@ -35,15 +47,15 @@ last name and phone number, room, start appointment date, end appointment date, 
 
 ### Diagnosing Patients
 
-
+For diagnosing patients we will need to introduce the doctors ID, the patients ID and the diagnosis comments, the diagnosis date should be set by default to the date on which the appointment is being made.
 
 ### Seeing Diagnosis
 
-In case we want to see any diagnosis details, the user can click on any diagnosis shown in the diagnosis list. After clicking on any diagnosis, the data on the form in the right 
+In case we want to see any diagnosis details, the user can click on any diagnosis shown in the diagnosis list. After clicking on any diagnosis, the data on the form in the right will be updatesd showing the doctor's first name and last name, the patient's first name and last name, the date the patient was diagnosed, and the diagnosis comments.
 
 ### 2. Patients Menu
 
-In this menu, we can Add, Update, or Remove patients from the hospital database.
+In this menu, we can Add, Update, or Remove patients from the hospital database. In case
 
 ### 3. Facilities Menu
 
@@ -56,4 +68,4 @@ In this menu, we can Add, Update, or Remove Staff from the hospital database.
 
 ## Authors
 
-* **Javier Arechalde** - *Initial work* - [Jarechalde] (https://github.com/jarechalde)
+* **Javier Arechalde** - *Project Development* - [Jarechalde] (https://github.com/jarechalde)
