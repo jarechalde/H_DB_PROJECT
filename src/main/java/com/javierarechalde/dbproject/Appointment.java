@@ -3,8 +3,6 @@ package com.javierarechalde.dbproject;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -262,8 +260,6 @@ public class Appointment {
 	public void setAppcom(String appcom) {
 		this.appcom = appcom;
 	}
-
-	private int inlist = 0;
 	
 	@Override
 	public String toString() {
@@ -288,10 +284,7 @@ public class Appointment {
 		
 		Appointment.LOGGER.warn("Called Delete function");
 		
-		Appointment.LOGGER.debug("{}", appid);
-		
-		final List<Appointment> Appointments = AppointmentsHelper.getInstance().getAppointments();
-		
+		Appointment.LOGGER.debug("{}", appid);	
 		
 		if (appid != -1) {
 			Appointment.LOGGER.debug("Appointment found in the table, Deleting...");
@@ -304,10 +297,7 @@ public class Appointment {
 		}
 	}
 	
-	public void save() throws SQLException{
-		
-		final List<Appointment> Appointments = AppointmentsHelper.getInstance().getAppointments();
-		
+	public void save() throws SQLException{		
 		
 		try(Connection connection = DBHelper.getConnection();){
 			if (appid == -1){

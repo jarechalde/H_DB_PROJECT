@@ -851,3 +851,72 @@
 2017-Dec-08 18:14:20.099 [AWT-EventQueue-0] INFO Application.java:2496 - Opening Patients Panel
 2017-Dec-08 18:14:21.102 [AWT-EventQueue-0] DEBUG Application.java:245 - Main menu
 2017-Dec-08 18:14:21.957 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 18:25:30.289 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 18:25:30.291 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 18:25:30.320 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 18:25:30.757 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-08 18:25:36.823 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 18:25:36.826 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 18:25:36.854 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 18:25:37.312 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-08 18:26:14.068 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 18:26:14.071 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 18:26:14.098 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 18:26:14.526 [main] ERROR Slf4jLog.java:52 - Migration of schema "PUBLIC" to version 2 - HOSPITAL POPULATE failed! Please restore backups and roll back database and code!
+2017-Dec-08 18:28:43.082 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 18:28:43.084 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 18:28:43.115 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 18:28:43.613 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 18:28:45.346 [AWT-EventQueue-0] INFO Application.java:2512 - Opening Facilities Panel
+2017-Dec-08 18:28:50.590 [AWT-EventQueue-0] DEBUG Application.java:624 - Main menu
+2017-Dec-08 18:28:51.390 [AWT-EventQueue-0] INFO Application.java:1523 - Appointments menu
+2017-Dec-08 18:28:51.783 [AWT-EventQueue-0] INFO Application.java:1691 - Seeing Appointments
+2017-Dec-08 18:28:51.794 [AWT-EventQueue-0] INFO Application.java:1014 - Refreshing Appointments
+2017-Dec-08 18:28:51.796 [SwingWorker-pool-1-thread-2] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-08 18:28:51.797 [SwingWorker-pool-1-thread-2] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-08 18:28:54.168 [AWT-EventQueue-0] DEBUG Application.java:1706 - Main menu
+2017-Dec-08 18:28:54.784 [AWT-EventQueue-0] INFO Application.java:2512 - Opening Facilities Panel
+2017-Dec-08 18:28:56.620 [AWT-EventQueue-0] DEBUG Application.java:624 - Main menu
+2017-Dec-08 18:28:57.074 [AWT-EventQueue-0] INFO Application.java:2496 - Opening Patients Panel
+2017-Dec-08 18:28:59.541 [AWT-EventQueue-0] DEBUG Application.java:245 - Main menu
+2017-Dec-08 18:29:00.572 [AWT-EventQueue-0] INFO Application.java:1536 - Diagnosis menu
+2017-Dec-08 18:29:01.441 [AWT-EventQueue-0] INFO Application.java:1658 - Editing Diagnosis
+2017-Dec-08 18:29:01.447 [AWT-EventQueue-0] INFO Application.java:1554 - Refreshing Diagnosis
+2017-Dec-08 18:29:01.449 [SwingWorker-pool-1-thread-5] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 18:29:01.449 [SwingWorker-pool-1-thread-5] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 18:29:01.449 [SwingWorker-pool-1-thread-5] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 18:29:03.007 [AWT-EventQueue-0] DEBUG Application.java:311 - Main menu
+2017-Dec-08 18:29:03.889 [AWT-EventQueue-0] INFO Application.java:1523 - Appointments menu
+2017-Dec-08 18:29:04.290 [AWT-EventQueue-0] INFO Application.java:1725 - Editing Appointments
+2017-Dec-08 18:29:04.296 [AWT-EventQueue-0] INFO Application.java:1118 - Refreshing Appointments
+2017-Dec-08 18:29:04.297 [SwingWorker-pool-1-thread-6] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-08 18:29:04.297 [SwingWorker-pool-1-thread-6] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-08 18:29:04.963 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:05.302 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:09.581 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:10.261 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:10.986 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:12.342 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:13.044 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:13.507 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:13.937 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:14.354 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:14.818 [AWT-EventQueue-0] INFO Application.java:1202 - Appointment
+2017-Dec-08 18:29:15.686 [AWT-EventQueue-0] DEBUG Application.java:188 - Main menu
+2017-Dec-08 18:29:16.827 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 18:30:42.620 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 18:30:42.624 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 18:30:42.660 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 18:30:43.143 [main] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 18:30:49.597 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 18:30:49.599 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 18:30:49.626 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 18:30:50.157 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 18:30:52.332 [AWT-EventQueue-0] INFO Application.java:1515 - Appointments menu
+2017-Dec-08 18:30:53.044 [AWT-EventQueue-0] INFO Application.java:1717 - Editing Appointments
+2017-Dec-08 18:30:53.086 [AWT-EventQueue-0] INFO Application.java:1110 - Refreshing Appointments
+2017-Dec-08 18:30:53.091 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-08 18:30:53.091 [SwingWorker-pool-1-thread-1] INFO AppointmentsHelper.java:37 - Ayy we are doing it
+2017-Dec-08 18:30:53.738 [AWT-EventQueue-0] INFO Application.java:1194 - Appointment
+2017-Dec-08 18:30:54.079 [AWT-EventQueue-0] INFO Application.java:1194 - Appointment
+2017-Dec-08 18:32:18.728 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source

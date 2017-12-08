@@ -41,11 +41,17 @@ INSERT INTO DIAGNOSIS (DIAGID,DIAGCOMM,DIAGDATE,PATID,DRID) VALUES
     
 --Populating the ROOMS TABLE
 INSERT INTO ROOMS (ROOMID,ROOMCAP,ROOMTYPE) VALUES
-    (098257,3,'Bedroom'), 
-    (092157,3,'Office'),
-    (098967,5,'Op. Room'),
-    (097827,5,'Op. Room'), 
-    (896547,4,'Bedroom');
+    (098257,3,'BEDROOM'), 
+    (092157,3,'OFFICE'),
+    (098967,5,'OPERATION ROOM'),
+    (097827,5,'OPERATION ROOM'), 
+    (896547,4,'BEDROOM');
+   
+--Populating the FACILITIES TABLE
+INSERT INTO FACILITIES (FACID,FACNAME,FACBUILD,FACPLANT,FACTYPE,FACDESC) VALUES
+    (default,'Cafe Sol','Main',1,'Cafeteria','Cafeteria sol in main building'),
+    (default,'Restrooms','Main',0,'Commodity','Ground floor restrooms');
+   
     
 --Populating the appointments table
 INSERT INTO APPOINTMENTS (APPID, APPPATID, APPDRID, APPROOMID, ASTART, AEND, APPCOM) VALUES
