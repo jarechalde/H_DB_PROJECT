@@ -7571,3 +7571,143 @@ INSERT INTO DIAGNOSIS (DIAGID, DIAGCOMM, DIAGDATE, PATID, DRID) VALUES (?, ?, ?,
 2017-Dec-08 00:06:11.564 [AWT-EventQueue-0] DEBUG Staff.java:115 - .
 2017-Dec-08 00:06:11.564 [AWT-EventQueue-0] DEBUG Staff.java:123 - Staff found in the table, Deleting...
 2017-Dec-08 00:06:14.510 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 11:33:18.221 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:33:18.230 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:33:18.267 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:33:18.789 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 11:33:21.620 [AWT-EventQueue-0] INFO FinalApplication.java:1461 - Going to Diagnosis menu
+2017-Dec-08 11:33:22.147 [AWT-EventQueue-0] INFO FinalApplication.java:1544 - Seeing Diagnosis
+2017-Dec-08 11:33:22.178 [AWT-EventQueue-0] INFO FinalApplication.java:955 - Refreshing Diagnosis
+2017-Dec-08 11:33:22.190 [SwingWorker-pool-1-thread-1] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 11:33:22.191 [SwingWorker-pool-1-thread-1] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 11:41:01.312 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 11:41:03.502 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:41:03.506 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:41:03.569 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:41:04.071 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:41:04.073 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:41:04.108 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:41:04.218 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 11:41:11.172 [AWT-EventQueue-0] INFO FinalApplication.java:2350 - Opening Patients Panel
+2017-Dec-08 11:43:47.154 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 11:43:51.584 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:43:51.587 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:43:51.649 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:43:51.948 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:43:51.951 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:43:51.980 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:43:52.185 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 11:43:58.873 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 11:44:13.859 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:44:13.861 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:44:13.886 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:44:14.372 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 11:44:18.298 [AWT-EventQueue-0] INFO FinalApplication.java:2350 - Opening Patients Panel
+2017-Dec-08 11:44:43.221 [AWT-EventQueue-0] DEBUG Patient.java:124 - Looking for key in the table...
+2017-Dec-08 11:44:43.222 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:44:43.222 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:44:43.222 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:44:43.222 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:44:43.222 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:44:43.223 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:44:43.223 [AWT-EventQueue-0] DEBUG Patient.java:135 - Key not in the table, Inserting...
+2017-Dec-08 11:45:04.143 [AWT-EventQueue-0] DEBUG Patient.java:124 - Looking for key in the table...
+2017-Dec-08 11:45:04.143 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.143 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.145 [AWT-EventQueue-0] DEBUG Patient.java:128 - Key in the table
+2017-Dec-08 11:45:04.145 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.145 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.145 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.145 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.146 [AWT-EventQueue-0] DEBUG Patient.java:126 - .
+2017-Dec-08 11:45:04.146 [AWT-EventQueue-0] DEBUG Patient.java:147 - Key already in the table, Updating...
+2017-Dec-08 11:46:33.611 [AWT-EventQueue-0] WARN Patient.java:94 - Called Delete function
+2017-Dec-08 11:46:33.612 [AWT-EventQueue-0] DEBUG Patient.java:96 - 21547
+2017-Dec-08 11:46:33.613 [AWT-EventQueue-0] DEBUG Patient.java:100 - Looking for key to delete...
+2017-Dec-08 11:46:33.613 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.613 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.613 [AWT-EventQueue-0] DEBUG Patient.java:104 - Key already in the table
+2017-Dec-08 11:46:33.613 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.614 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.614 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.614 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.614 [AWT-EventQueue-0] DEBUG Patient.java:102 - .
+2017-Dec-08 11:46:33.614 [AWT-EventQueue-0] DEBUG Patient.java:110 - Patient found in the table, Deleting...
+2017-Dec-08 11:46:33.620 [AWT-EventQueue-0] ERROR FinalApplication.java:164 - WTF just happened
+org.h2.jdbc.JdbcSQLException: Referential integrity constraint violation: "CONSTRAINT_ED7: PUBLIC.DIAGNOSIS FOREIGN KEY(PATID) REFERENCES PUBLIC.PATIENTS(PATID) (21547)"; SQL statement:
+DELETE FROM PATIENTS WHERE PATID = ? [23503-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:414)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:431)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:307)
+	at org.h2.table.Table.fireConstraints(Table.java:870)
+	at org.h2.table.Table.fireAfterRow(Table.java:887)
+	at org.h2.command.dml.Delete.update(Delete.java:99)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:75)
+	at org.h2.command.Command.executeUpdate(Command.java:230)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:194)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:198)
+	at com.javierarechalde.dbproject.Patient.delete(Patient.java:114)
+	at com.javierarechalde.dbproject.FinalApplication.delete(FinalApplication.java:162)
+	at com.javierarechalde.dbproject.FinalApplication.access$8(FinalApplication.java:158)
+	at com.javierarechalde.dbproject.FinalApplication$9.actionPerformed(FinalApplication.java:260)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-Dec-08 11:46:35.349 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 11:48:17.917 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:48:17.920 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:48:17.946 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:48:18.433 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 11:48:20.664 [AWT-EventQueue-0] INFO FinalApplication.java:1461 - Going to Diagnosis menu
+2017-Dec-08 11:48:21.167 [AWT-EventQueue-0] INFO FinalApplication.java:1544 - Seeing Diagnosis
+2017-Dec-08 11:48:21.188 [AWT-EventQueue-0] INFO FinalApplication.java:955 - Refreshing Diagnosis
+2017-Dec-08 11:48:21.193 [SwingWorker-pool-1-thread-1] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 11:48:21.193 [SwingWorker-pool-1-thread-1] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 11:48:22.560 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
+2017-Dec-08 11:48:23.907 [main] DEBUG DBHelper.java:51 - Loading Properties
+2017-Dec-08 11:48:23.909 [main] DEBUG DBHelper.java:64 - Creating the data source
+2017-Dec-08 11:48:23.940 [main] DEBUG DBHelper.java:71 - Executing Flyway (database migration)
+2017-Dec-08 11:48:24.447 [AWT-EventQueue-0] DEBUG Main.java:20 - Starting UI
+2017-Dec-08 11:48:25.793 [AWT-EventQueue-0] INFO FinalApplication.java:1461 - Going to Diagnosis menu
+2017-Dec-08 11:48:26.946 [AWT-EventQueue-0] INFO FinalApplication.java:1562 - Editing Diagnosis
+2017-Dec-08 11:48:26.973 [AWT-EventQueue-0] INFO FinalApplication.java:1479 - Refreshing Diagnosis
+2017-Dec-08 11:48:26.977 [SwingWorker-pool-1-thread-1] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 11:48:26.978 [SwingWorker-pool-1-thread-1] INFO DiagnosisHelper.java:37 - Getting Diagnosis
+2017-Dec-08 11:55:00.464 [Thread-3] DEBUG DBHelper.java:36 - Closing the data source
