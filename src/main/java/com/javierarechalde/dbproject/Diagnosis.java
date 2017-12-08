@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class Diagnosis {
 	
@@ -100,6 +101,103 @@ public class Diagnosis {
 		}
 		
 		return formatted.toString();
+	}
+	
+	private String drname = null;
+	private String drlname = null;
+	private String patname = null;
+	private String patlname = null;
+	
+	public String getdrname(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM DOCTORS WHERE DRID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the dr id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					drname = rs.getString("FNAME");
+					
+				}
+				
+			}
+	
+		}
+		
+		return drname;
+	}
+	
+	public String getdrlname(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM DOCTORS WHERE DRID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the dr id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					drlname = rs.getString("LNAME");
+					
+				}
+				
+			}
+	
+		}
+		
+		return drlname;
+	}
+	
+	public String getpatname(int mything) throws SQLException{
+		
+		try(Connection connection = DBHelper.getConnection();){
+			final String sql = "SELECT * FROM PATIENTS WHERE PATID = ?";
+			try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+				
+				//Adding the patient id to the SQL statement
+				pstmt.setInt(1, mything);
+				ResultSet rs = pstmt.executeQuery();
+				
+				while (rs.next()){
+					
+					patname = rs.getString("FNAME");
+					
+				}
+				
+			}
+	
+		}
+		
+		return patname;
+}
+
+	public String getpatlname(int mything) throws SQLException{
+	
+	try(Connection connection = DBHelper.getConnection();){
+		final String sql = "SELECT * FROM PATIENTS WHERE PATID = ?";
+		try(PreparedStatement pstmt = connection.prepareStatement(sql)){	
+			
+			//Adding the patient id to the SQL statement
+			pstmt.setInt(1, mything);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next()){
+				
+				patlname = rs.getString("LNAME");
+				
+				}
+			
+			}
+
+		}
+	
+		return patlname;
 	}
 	
 	public void delete() throws SQLException{

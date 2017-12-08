@@ -95,6 +95,8 @@ public class FinalApplication extends JFrame{
 		initUI();
 		initActions();
 		initActionsApp();
+		initActionsDiag();
+		initActionsFac();
 	}
 	
 	
@@ -260,6 +262,112 @@ public class FinalApplication extends JFrame{
 			};
 		}
 	
+	//Creating the actions for the diagnosis
+	private Action refreshActionDiag;
+	private Action newActionDiag;
+	private Action saveActionDiag;
+	private Action deleteActionDiag;
+	
+	//Actions for the diagnosis toolbar
+	private void initActionsDiag() {
+		
+		refreshActionDiag = new AbstractAction("RefreshDiag", load("Refresh")) {
+			private static final long serialVersionUID = -3876237444679320139L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				refreshDiags();
+				
+			}
+		};
+		
+		newActionDiag = new AbstractAction("NewApp", load("New")) {
+			private static final long serialVersionUID = -605237333970985709L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				createNewDiag();
+				
+			}
+		};
+		
+		saveActionDiag = new AbstractAction("SaveApp", load("Save")) {
+			private static final long serialVersionUID = 2918460914014829628L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				saveDiag();
+				
+			}
+		};
+		
+		deleteActionDiag = new AbstractAction("DeleteApp", load("Delete")) {
+			private static final long serialVersionUID = 9008483889368221463L;
+
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				deleteDiag();
+				
+			}
+		};
+	}
+	
+	//Functions for the diagnosis panel
+	
+	private void createNewDiag() {
+		
+		Diagnosis diagnosis = new Diagnosis();
+		
+		diagnosis.setDiagid(-1);
+		diagnosis.setDrid(000000);
+		diagnosis.setPatid(000000);
+		diagnosis.setDiagdate(java.sql.Date.valueOf("2015-01-01"));
+		diagnosis.setDiagcomm("Comments go here");
+		
+		setSelectedDiagnosis(diagnosis);
+		
+	}
+	
+	private void saveDiag() {
+		
+		if (selecteddiag!=null) {
+		
+		selecteddiag.setDiagid(Integer.parseInt(diagidTF.getText()));
+		selecteddiag.setDrid(Integer.parseInt(diagdridTF.getText()));
+		selecteddiag.setPatid(Integer.parseInt(diagpatidTF.getText()));
+		selecteddiag.setDiagdate(java.sql.Date.valueOf(diagdateTF.getText()));
+		selecteddiag.setDiagcomm(diagcommTA.getText());
+				
+		try{
+			selecteddiag.save();
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(this, "Failed to save the selected diagnosis", "Save", JOptionPane.WARNING_MESSAGE);
+			FinalApplication.LOGGER.debug("Error", e);
+		} finally {
+			refreshDiags();
+		}
+		}
+
+	}
+	
+	private void deleteDiag() {
+		FinalApplication.LOGGER.debug("Called delete function");
+		
+		if (selecteddiag!=null) {
+		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selecteddiag +"?", "Delete", JOptionPane.YES_NO_OPTION)) {
+			try {
+				selecteddiag.delete();
+			} catch (final SQLException e) {
+				FinalApplication.LOGGER.error("WTF just happened",e);
+				JOptionPane.showMessageDialog(this, "Failed to delete the selected diagnosis", "Delete", JOptionPane.WARNING_MESSAGE);;
+			} finally {
+				setSelectedDiagnosis(null);
+				refreshDiags();
+				}
+			}
+		}
+	}
+
 	//Creating the list of patients
 	private JComponent createListPane() {
 		patientsListModel = new DefaultListModel<>();
@@ -276,6 +384,57 @@ public class FinalApplication extends JFrame{
 		
 		return new JScrollPane(patientsList);
 	
+	}
+	
+	
+	//Lists for the facilities
+	private DefaultListModel<Facilities> facsListModel;
+	private JList<Facilities> facsList;
+		
+	//Variable for the selected diagnosis
+	private Facilities selectedfac;
+	
+	//Creating the list of facilities
+	private JComponent createListPaneFac() {
+		facsListModel = new DefaultListModel<>();
+		facsList = new JList<>(facsListModel);
+		facsList.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if(!e.getValueIsAdjusting()) {
+					Facilities selectedfac = facsList.getSelectedValue();
+					setSelectedFacility(selectedfac);
+				}
+			}
+		});
+		
+		return new JScrollPane(facsList);
+	
+	}
+	
+	//Setting selected facility
+	private void setSelectedFacility(Facilities facility) {
+		
+		this.selectedfac = facility;
+		
+		if(facility==null) {
+			
+			facidTF.setText("");
+			facnameTF.setText("");
+			facbuildTF.setText("");
+			facplantTF.setText("");
+			factypeTF.setText("");
+			facdescTA.setText("");
+			
+		} else {
+			
+			facidTF.setText(String.valueOf(facility.getFacid()));
+			facnameTF.setText(String.valueOf(facility.getFacname()));
+			facbuildTF.setText(String.valueOf(facility.getFacbuild()));
+			facplantTF.setText(String.valueOf(facility.getFacplant()));
+			factypeTF.setText(String.valueOf(facility.getFactype()));
+			facdescTA.setText(String.valueOf(facility.getFacdesc()));
+		}
 	}
 
 	
@@ -330,6 +489,140 @@ public class FinalApplication extends JFrame{
 		return toolBar;
 	}
 	
+	//Toolbar for the diagnosis
+	private JToolBar createToolBarDiag() {
+		final JToolBar toolBar = new JToolBar();
+		toolBar.add(refreshActionDiag);
+		toolBar.addSeparator();
+		toolBar.add(newActionDiag);
+		toolBar.addSeparator();
+		toolBar.add(saveActionDiag);
+		toolBar.addSeparator();
+		toolBar.add(deleteActionDiag);
+		
+		return toolBar;
+	}
+	
+	//Actions for the facilities
+	private Action refreshActionFac;
+	private Action newActionFac;
+	private Action saveActionFac;
+	private Action deleteActionFac;
+	
+	//Actions for the facilities toolbar
+		private void initActionsFac() {
+			
+			refreshActionFac = new AbstractAction("RefreshFac", load("Refresh")) {
+				private static final long serialVersionUID = -3876237444679320139L;
+
+				@Override
+				public void actionPerformed(final ActionEvent e) {
+					refreshFac();
+					
+				}
+			};
+			
+			newActionFac = new AbstractAction("NewFac", load("New")) {
+				private static final long serialVersionUID = -605237333970985709L;
+
+				@Override
+				public void actionPerformed(final ActionEvent e) {
+					createNewFac();
+					
+				}
+			};
+			
+			saveActionFac = new AbstractAction("SaveFac", load("Save")) {
+				private static final long serialVersionUID = 2918460914014829628L;
+
+				@Override
+				public void actionPerformed(final ActionEvent e) {
+					saveFac();
+					
+				}
+			};
+			
+			deleteActionFac = new AbstractAction("DeleteFac", load("Delete")) {
+				private static final long serialVersionUID = 9008483889368221463L;
+
+				@Override
+				public void actionPerformed(final ActionEvent e) {
+					deleteFac();
+					
+				}
+			};
+		}
+		
+		//Functions for the facilities toolbar
+		private void createNewFac() {
+			
+			Facilities facility = new Facilities();
+			
+			facility.setFacid(-1);
+			facility.setFacbuild("Building");
+			facility.setFacname("Name");
+			facility.setFacplant(0);
+			facility.setFacdesc("Description");
+			facility.setFactype("Type");
+			
+			setSelectedFacility(facility);			
+		}
+		
+		private void saveFac() {
+			
+			if (selectedfac!=null) {
+				
+			selectedfac.setFacbuild(facbuildTF.getText());
+			selectedfac.setFacname(facnameTF.getText());
+			selectedfac.setFacplant(Integer.parseInt(facplantTF.getText()));
+			selectedfac.setFacdesc(facdescTA.getText());
+			selectedfac.setFactype(factypeTF.getText());
+			
+			try{
+				selectedfac.save();
+			} catch (SQLException e) {
+				JOptionPane.showMessageDialog(this, "Failed to save the selected facility", "Save", JOptionPane.WARNING_MESSAGE);
+				FinalApplication.LOGGER.debug("Error", e);
+			} finally {
+				refreshFacilities();
+			}
+			}
+
+		}
+		
+		private void deleteFac() {
+			FinalApplication.LOGGER.debug("Called delete function");
+			
+			if (selectedfac!=null) {
+			if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(this, "Delete " + selectedapp +"?", "Delete", JOptionPane.YES_NO_OPTION)) {
+				try {
+					selectedfac.delete();
+				} catch (final SQLException e) {
+					FinalApplication.LOGGER.error("WTF just happened",e);
+					JOptionPane.showMessageDialog(this, "Failed to delete the selected facility", "Delete", JOptionPane.WARNING_MESSAGE);;
+				} finally {
+					setSelectedFacility(null);
+					refreshFacilities();
+					}
+				}
+			}
+		}
+		
+	
+	//Toolbar for the facilities
+	private JToolBar createToolBarFac() {
+		final JToolBar toolBar = new JToolBar();
+		toolBar.add(refreshActionFac);
+		toolBar.addSeparator();
+		toolBar.add(newActionFac);
+		toolBar.addSeparator();
+		toolBar.add(saveActionFac);
+		toolBar.addSeparator();
+		toolBar.add(deleteActionFac);
+		
+		return toolBar;
+	}
+	
 	private void setSelectedPatient(Patient patient) {
 		
 		this.selected = patient;
@@ -368,8 +661,8 @@ public class FinalApplication extends JFrame{
 	}
 	
 	//Lists for the diagnosis
-	private DefaultListModel<Appointment> diagsListModel;
-	private JList<Appointment> diagsList;
+	private DefaultListModel<Diagnosis> diagsListModel;
+	private JList<Diagnosis> diagsList;
 		
 	//Variable for the selected diagnosis
 	private Diagnosis selecteddiag;
@@ -398,23 +691,20 @@ public class FinalApplication extends JFrame{
 		this.selecteddiag = diagnosis;
 		
 		if(diagnosis==null) {
-			appidTextField.setText("");
-			apppatidTextField.setText("");
-			appdridTextField.setText("");
-			appridTextField.setText("");
-			appstartTextField.setText("");
-			appendTextField.setText("");
-			appcommentsTextArea.setText("");
+			diagidTF.setText("");
+			diagdateTF.setText("");
+			diagdridTF.setText("");
+			diagpatidTF.setText("");
+			diagcommTA.setText("");
 			
 		} else {
 			
-			appidTextField.setText(String.valueOf(appointment.getAppid()));
-			apppatidTextField.setText(String.valueOf(appointment.getPatid()));
-			appdridTextField.setText(String.valueOf(appointment.getDrid()));
-			appridTextField.setText(String.valueOf(appointment.getRoomid()));
-			appstartTextField.setText(String.valueOf(appointment.getAstart()));
-			appendTextField.setText(String.valueOf(appointment.getAend()));
-			appcommentsTextArea.setText(String.valueOf(appointment.getAppcom()));
+
+			diagidTF.setText(String.valueOf(diagnosis.getDiagid()));
+			diagdateTF.setText(String.valueOf(diagnosis.getDiagdate()));
+			diagdridTF.setText(String.valueOf(diagnosis.getDrid()));
+			diagpatidTF.setText(String.valueOf(diagnosis.getPatid()));
+			diagcommTA.setText(String.valueOf(diagnosis.getDiagcomm()));
 		}
 	}
 	
@@ -471,6 +761,84 @@ public class FinalApplication extends JFrame{
 		worker.execute();
 		
 	}
+	
+	//Refreshing the Diagnosis to show
+		private void refreshDiagsShow() {
+			
+			FinalApplication.LOGGER.info("Refreshing Diagnosis");
+			
+			diagsListModelShow.removeAllElements();
+			final SwingWorker<Void, Diagnosis> worker = new SwingWorker<Void, Diagnosis>() {
+				@Override
+				protected Void doInBackground() throws Exception{
+					final List<Diagnosis> diagnosiss = DiagnosisHelper.getInstance().getDiagnosis();
+					for(final Diagnosis diagnosis: diagnosiss) {
+						publish(diagnosis);
+					}
+					return null;
+				}
+				
+				@Override
+				protected void process(final List<Diagnosis> chunks) {
+					for(final Diagnosis diagnosis: chunks) {
+						diagsListModelShow.addElement(diagnosis);
+					}
+				}
+			};
+			
+			worker.execute();
+			
+		}
+		
+		//Set the selected diagnosis to show
+		private void setSelectedDiagnosisShow(Diagnosis diagnosishow) {
+			
+			this.selecteddiagshow = diagnosishow;
+			
+			if(diagnosishow==null) {
+				duidrnameTF.setText("");
+				duidrlnameTF.setText("");
+				duipatnameTF.setText("");
+				duipatlnameTF.setText("");
+				duidateTF.setText("");
+				duicommTA.setText("");
+				
+			} else {
+				
+			
+				final int drid  = diagnosishow.getDiagid();
+				final int patid = diagnosishow.getPatid();
+				
+				try {
+					
+					String drfname = diagnosishow.getdrname(drid);
+					duidrnameTF.setText(String.valueOf(drfname));
+					
+					String drlname = diagnosishow.getdrlname(drid);
+					duidrlnameTF.setText(String.valueOf(drlname));
+					
+					
+					String patname = diagnosishow.getpatname(patid);
+					System.out.println(patname);
+					duipatnameTF.setText(String.valueOf(patname));
+					
+					String patlname = diagnosishow.getpatlname(patid);
+					System.out.println(patlname);
+					duipatlnameTF.setText(String.valueOf(patlname));
+					
+					
+				} catch (SQLException e) {
+					FinalApplication.LOGGER.error("Error", e);
+				}
+				
+				duidateTF.setText(String.valueOf(diagnosishow.getDiagdate()));
+				duicommTA.setText(String.valueOf(diagnosishow.getDiagcomm()));
+
+		
+			
+				
+			}
+		}
 	
 	//Function for refreshing the appointment list
 	private void refreshApps() {
@@ -918,6 +1286,60 @@ public class FinalApplication extends JFrame{
 		
 	}
 	
+	//Function for refreshing the diagnosis list
+		private void refreshDiags() {
+			
+			FinalApplication.LOGGER.info("Refreshing Diagnosis");
+			
+			diagsListModel.removeAllElements();
+			final SwingWorker<Void, Diagnosis> worker = new SwingWorker<Void, Diagnosis>() {
+				@Override
+				protected Void doInBackground() throws Exception{
+					final List<Diagnosis> diagnosiss = DiagnosisHelper.getInstance().getDiagnosis();
+					for(final Diagnosis diagnosis: diagnosiss) {
+						publish(diagnosis);
+					}
+					return null;
+				}
+				
+				@Override
+				protected void process(final List<Diagnosis> chunks) {
+					for(final Diagnosis diagnosis: chunks) {
+						diagsListModel.addElement(diagnosis);
+					}
+				}
+			};
+			
+			worker.execute();
+			
+		}
+		
+	//Lists for the diagnosis show
+	private DefaultListModel<Diagnosis> diagsListModelShow;
+	private JList<Diagnosis> diagsListShow;
+	
+	//Variable for the selected appointment show
+	private Diagnosis selecteddiagshow;
+	
+	//List of appointments to show the appointments
+	private JComponent createListDiagShow() {
+		diagsListModelShow = new DefaultListModel<>();
+		diagsListShow = new JList<>(diagsListModelShow);
+		diagsListShow.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				if(!e.getValueIsAdjusting()) {
+					Diagnosis selecteddiagshow = diagsListShow.getSelectedValue();
+					setSelectedDiagnosisShow(selecteddiagshow);
+					
+				}
+			}
+		});
+		
+		return new JScrollPane(diagsListShow);
+	
+	}
+	
 	private JPanel createDiagSel() {
 		
 		final JPanel diagselpanel = new JPanel(new GridLayout(2,1));
@@ -932,15 +1354,16 @@ public class FinalApplication extends JFrame{
 		
 		seediag.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-            	FinalApplication.LOGGER.info("Seeing Appointments");
+            	FinalApplication.LOGGER.info("Seeing Diagnosis");
             	getContentPane().remove(diagselpanel);
-            	JComponent listappshow = createListAppShow();
-            	add(listappshow, BorderLayout.WEST);
-            	JPanel appui = appointmentUI();
-            	add(appui, BorderLayout.CENTER);
+            	JComponent listdiagsshow = createListDiagShow();
+            	add(listdiagsshow, BorderLayout.WEST);
             	
-            	//Adding appointments to the panel
-            	refreshAppsShow();
+            	JPanel diagui = diagnosisUI();
+            	add(diagui, BorderLayout.CENTER);
+            	
+            	//Adding diagnosis to the panel
+            	refreshDiagsShow();
                 getContentPane().invalidate();
                 getContentPane().validate();
             	
@@ -949,15 +1372,15 @@ public class FinalApplication extends JFrame{
 		
 		editdiag.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				FinalApplication.LOGGER.info("Editing Appointments");
+				FinalApplication.LOGGER.info("Editing Diagnosis");
                 getContentPane().remove(diagselpanel);
                 JPanel diagpanel = createDiagPanel();
                 add(diagpanel);
                 JComponent listdiag = createListDiag();
-                //add(listapp, BorderLayout.WEST);
-                //refreshDiags();
-                //JToolBar toolbardiag = createToolBarDiag();
-                //add(toolbardiag, BorderLayout.NORTH);
+                add(listdiag, BorderLayout.WEST);
+                refreshDiags();
+                JToolBar toolbardiag = createToolBarDiag();
+                add(toolbardiag, BorderLayout.NORTH);
                 getContentPane().invalidate();
                 getContentPane().validate();
 			}
@@ -1237,6 +1660,285 @@ public class FinalApplication extends JFrame{
 		return appui;
 	}
 	
+	//Variables for the diagnosis UI
+	private JTextField duidrnameTF;
+	private JTextField duidrlnameTF;
+	private JTextField duipatnameTF;
+	private JTextField duipatlnameTF;
+	private JTextField duidateTF;
+	private JTextArea duicommTA;
+	
+	//UI for the diagnosis
+	private JPanel diagnosisUI(){
+
+		//Creating the component for the patients
+		final JPanel diagui = new JPanel(new GridBagLayout());
+		
+		//DR Name
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagui.add(new JLabel("Dr. First Name"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.weightx = 1;
+		constraints.gridy = 1;
+		constraints.gridx = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		duidrnameTF = new JTextField();
+		diagui.add(duidrnameTF, constraints);
+				
+		//DR Last Name
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.gridx = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagui.add(new JLabel("Dr. Last Name"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 1;
+		constraints.gridx = 4;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		duidrlnameTF = new JTextField();
+		diagui.add(duidrlnameTF, constraints);
+		
+		//Patient First Name
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagui.add(new JLabel("Pat. First Name"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.weightx = 1;
+		constraints.gridy = 2;
+		constraints.gridx = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		duipatnameTF = new JTextField();
+		diagui.add(duipatnameTF, constraints);
+				
+		//PAtient last name
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		diagui.add(new JLabel("Pat. Last Name"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 4;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		duipatlnameTF = new JTextField();
+		diagui.add(duipatlnameTF, constraints);
+		
+		//Appointment Date
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets = new Insets(2,2,2,2);
+		diagui.add(new JLabel("Date"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		constraints.gridx = 2;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		duidateTF = new JTextField();
+		diagui.add(duidateTF, constraints);
+		
+		//Diagnosis Comments
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets = new Insets(2,2,2,2);
+		diagui.add(new JLabel("Comments"), constraints);
+
+		constraints = new GridBagConstraints();
+		constraints.gridy = 5;
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		duicommTA = new JTextArea();
+		diagui.add(duicommTA, constraints);
+		
+		return diagui;
+	}
+	
+	//Text fields for the facilities ui
+	private JTextField facidTF;
+	private JTextField facnameTF;
+	private JTextField facbuildTF;
+	private JTextField facplantTF;
+	private JTextField factypeTF;
+	private JTextArea facdescTA;
+	
+	//UI for the facilities
+	private JPanel facilitiesUI(){
+	
+		//Creating the component for the patients
+		final JPanel facui = new JPanel(new GridBagLayout());
+		
+		//Facilities ID
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		facui.add(new JLabel("Facility ID"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.weightx = 1;
+		constraints.gridy = 1;
+		constraints.gridx = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		facidTF = new JTextField();
+		facui.add(facidTF, constraints);
+				
+		//Facilities name
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		facui.add(new JLabel("Facility Name"), constraints);
+	
+		constraints = new GridBagConstraints();
+		constraints.gridy = 2;
+		constraints.gridx = 2;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		facnameTF = new JTextField();
+		facui.add(facnameTF, constraints);
+		
+		//Facility building
+		constraints = new GridBagConstraints();
+		constraints.gridx = 1;
+		constraints.gridy = 3;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		facui.add(new JLabel("Facility Building"), constraints);
+		
+		constraints = new GridBagConstraints();
+		constraints.weightx = 1;
+		constraints.gridy = 3;
+		constraints.gridx = 2;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		facbuildTF = new JTextField();
+		facui.add(facbuildTF, constraints);
+				
+		//Facility plant
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		facui.add(new JLabel("Pat. Last Name"), constraints);
+	
+		constraints = new GridBagConstraints();
+		constraints.gridy = 4;
+		constraints.gridx = 2;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		facplantTF = new JTextField();
+		facui.add(facplantTF, constraints);
+		
+		//Facility Type
+		constraints = new GridBagConstraints();
+		constraints.gridy = 5;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets = new Insets(2,2,2,2);
+		facui.add(new JLabel("Facility Type"), constraints);
+	
+		constraints = new GridBagConstraints();
+		constraints.gridy = 5;
+		constraints.gridx = 2;
+		constraints.weightx = 1;
+		constraints.anchor = GridBagConstraints.WEST;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		factypeTF = new JTextField();
+		facui.add(factypeTF, constraints);
+		
+		//Facility description
+		constraints = new GridBagConstraints();
+		constraints.gridy = 6;
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets = new Insets(2,2,2,2);
+		facui.add(new JLabel("Description"), constraints);
+	
+		constraints = new GridBagConstraints();
+		constraints.gridy = 7;
+		constraints.gridx = 1;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.insets =  new Insets(2,2,2,2);
+		constraints.fill = GridBagConstraints.BOTH;
+		facdescTA = new JTextArea();
+		facui.add(facdescTA, constraints);
+		
+		return facui;
+		
+	}
+	
+	//Refresh facilities
+	private void refreshFacilities() {
+		
+		facsListModel.removeAllElements();
+		final SwingWorker<Void, Facilities> worker = new SwingWorker<Void, Facilities>() {
+			@Override
+			protected Void doInBackground() throws Exception{
+				final List<Facilities> facilities = FacilitiesHelper.getInstance().getFacilities();
+				for(final Facilities facility: facilities) {
+					publish(facility);
+				}
+				return null;
+			}
+			
+			@Override
+			protected void process(final List<Facilities> chunks) {
+				for(final Facilities facility: chunks) {
+					facsListModel.addElement(facility);
+				}
+			}
+		};
+		
+		worker.execute();
+		
+}
+	
 	private void initUI() {
 		//Buttons for the main frame
 		final JButton DrButton = new JButton("DOCTORS");
@@ -1365,15 +2067,31 @@ public class FinalApplication extends JFrame{
 		
 		FacButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-            	controlpanel.setVisible(false);
-            	FinalApplication.LOGGER.info("LISTENED BRO");
+            	FinalApplication.LOGGER.info("Opening Facilities Panel");
+                getContentPane().remove(controlpanel);
+                JPanel facpanel = facilitiesUI();
+                add(facpanel);
+                add(createListPaneFac(), BorderLayout.WEST);
+                refreshFacilities();
+                JToolBar toolbarfac = createToolBarFac();
+                add(toolbarfac, BorderLayout.NORTH);
+                getContentPane().invalidate();
+                getContentPane().validate();
             }
         });
 		
 		StaffButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-            	controlpanel.setVisible(false);
-            	FinalApplication.LOGGER.info("LISTENED BRO");
+            	FinalApplication.LOGGER.info("Opening Staff Panel");
+                getContentPane().remove(controlpanel);
+                JPanel staffpanel = staffUI();
+                //add(staffpanel);
+                //add(createListPaneStaff(), BorderLayout.WEST);
+                //refreshStaff();
+                //JToolBar toolbarstaff = createToolBarStaff();
+                //add(toolbarstaff, BorderLayout.NORTH);
+                getContentPane().invalidate();
+                getContentPane().validate();
             }
         });
 		
